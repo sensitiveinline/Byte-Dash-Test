@@ -1,3 +1,12 @@
+
+# --- explicit submodule imports (importlib) ---
+import importlib
+news_agent      = importlib.import_module("scripts.collectors.news_agent")
+github_agent    = importlib.import_module("scripts.collectors.github_agent")
+platforms_agent = importlib.import_module("scripts.scorers.platforms_agent")
+note_agent      = importlib.import_module("scripts.notes.note_agent")
+# ----------------------------------------------
+
 # --- import path & dotenv guards (auto-injected) ---
 import sys, pathlib
 # add repo root to sys.path so 'scripts.*' imports work no matter how it's run
@@ -14,9 +23,9 @@ except Exception:
     pass
 import json, pathlib, time
 
-from scripts.collectors import news_agent, github_agent
-from scripts.scorers import platforms_agent
-from scripts.notes import note_agent
+import importlib
+# replaced by importlib below
+
 
 DATA = pathlib.Path("data"); DATA.mkdir(exist_ok=True)
 
