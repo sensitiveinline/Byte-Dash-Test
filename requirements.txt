@@ -1,5 +1,6 @@
-pydantic==2.8.2
-python-dateutil==2.9.0.post0
-requests==2.32.3
-feedparser==6.0.11
-numpy==2.0.1
+python-dotenv
+# 아래는 쓰고 있으면 같이 적어두세요(없으면 자동 무시)
+requests
+feedparser
+beautifulsoup4
+pandas
