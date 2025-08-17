@@ -1,47 +1,5 @@
-{
-  "items": [
-    {
-      "id": "openai-chatgpt",
-      "name": "ChatGPT",
-      "url": "https://chat.openai.com/",
-      "score": 92.4,
-      "rank": 1,
-      "delta7": 1.1,
-      "delta30": 3.2,
-      "ts": "2025-08-17T10:58:27.659422Z",
-      "ai": {
-        "insight": "대중성 최강—기업 전환률이 관건.",
-        "tags": [
-          "distribution"
-        ],
-        "confidence": 0.75,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "rule+ai/post-hoc"
-    },
-    {
-      "id": "google-gemini",
-      "name": "Gemini",
-      "url": "https://gemini.google.com/",
-      "score": 89.8,
-      "rank": 2,
-      "delta7": 1.4,
-      "delta30": 2.1,
-      "ts": "2025-08-17T10:58:27.659422Z",
-      "ai": {
-        "insight": "Workspace 기본탑재 확대로 업무 침투 가속.",
-        "tags": [
-          "workspace"
-        ],
-        "confidence": 0.78,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "rule+ai/post-hoc"
-    }
-  ],
-  "meta": {
-    "generatedAt": "2025-08-17T10:58:28.855240Z"
-  }
-}
+{ "items": [
+  { "rank": 1, "name": "OpenAI", "score": 98 },
+  { "rank": 2, "name": "Google DeepMind", "score": 95 },
+  { "rank": 3, "name": "Anthropic", "score": 90 }
+], "meta": { "updated": "manual" } }
