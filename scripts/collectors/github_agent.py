@@ -137,7 +137,8 @@ def trending_fallback(log: list) -> List[Dict]:
         html = requests.get("https://github.com/trending?since=daily", headers=UA, timeout=20).text
         soup = BeautifulSoup(html, "lxml")
         for a in soup.select("article.Box-row h2 a"):
-            full = " ".join(a.get_text(strip=True).split()).replace(" / ", "/")
+            full = " ".join(a.get_text(strip=True).split())
+            full = re.sub(r"\s*/\s*", "/", full).strip()
             if "/" not in full: continue
             out.append({
                 "repo": full,
@@ -151,6 +152,45 @@ def trending_fallback(log: list) -> List[Dict]:
     except Exception as e:
         log.append(f"trending_error={type(e).__name__}")
     return out
+
+
+def enrich_metrics(items, log):
+    """가벼운 메트릭 보강: stars, updated → release_recency 근사. 토큰 없어도 일부는 성공."""
+    import requests, datetime
+    from datetime import timezone
+    token = os.getenv("GITHUB_TOKEN")
+    headers = dict(UA)
+    if token: headers["Authorization"] = f"token {token}"
+    ok = 0
+    for it in items:
+        full = it.get("repo","")
+        if "/" not in full: continue
+        try:
+            r = requests.get(f"{GH}/repos/{full}", headers=headers, timeout=8)
+            if r.status_code == 403:  # rate limit
+                log.append("enrich:rate_limited")
+                break
+            if r.status_code >= 400:
+                continue
+            data = r.json()
+            it["stars"] = int(data.get("stargazers_count", it.get("stars",0)) or 0)
+            # updated_at → 일수로 근사하여 release_recency 대체
+            upd = data.get("updated_at")
+            if upd:
+                from datetime import datetime as dt
+                try:
+                    t = dt.fromisoformat(upd.replace('Z','+00:00'))
+                    days = max(0, (datetime.datetime.now(timezone.utc)-t).days)
+                    it["release_recency"] = max(0.0, 90.0 - float(days))  # 최근일수 반비례(최대 90)
+                except Exception:
+                    pass
+            ok += 1
+            if ok >= 8:  # 너무 많이 때리지 않음
+                break
+        except Exception:
+            continue
+    log.append(f"enrich_ok={ok}")
+
 
 def static_fallback(log: list) -> List[Dict]:
     base = [
@@ -181,9 +221,18 @@ def run(write_to="data/github.json"):
         items += static_fallback(log)
 
     items = _uniq(items)[:TOP_N]
-    # 스코어 계산(간이)
+
+    # 간단 메트릭 보강(API 여유분으로 몇 개만)
+    try:
+        enrich_metrics(items, log)
+    except Exception as e:
+        log.append(f"enrich_error={type(e).__name__}")
+
+    # 스코어 계산(기존 score 있으면 유지)
     for it in items:
-        it["score"] = round(_score(it), 1)
+        calc = round(_score(it), 1)
+        if it.get('score') is None or calc > 0:
+            it['score'] = max(float(it.get('score',0) or 0), calc)
 
     out = {"generated_at": now_iso(), "items": items, "meta": {"log": log}}
     write_json(write_to, out)
