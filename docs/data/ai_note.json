@@ -1,42 +1,7 @@
-{
-  "period": "daily",
-  "date": "2025-08-17",
-  "source_counts": {
-    "platform": 2,
-    "github": 30,
-    "news": 2
-  },
-  "highlights": [
-    {
-      "category": "모델·제품",
-      "title": "Gemini, Docs/Gmail 통합 확대",
-      "takeaway": "생산성 스택 침투 가속.",
-      "links": [
-        "https://ai.googleblog.com/example"
-      ]
-    },
-    {
-      "category": "생태계",
-      "title": "경량·오픈 확산",
-      "takeaway": "개발자 레이더는 ‘작게, 빠르게’.",
-      "links": []
-    }
-  ],
-  "cross_signals": [
-    {
-      "entity": "Gemini",
-      "signal": "플랫폼 점수↑·Workspace 업데이트",
-      "insight": "제품 업데이트가 사용 지표로 연결"
-    },
-    {
-      "entity": "LLaMA",
-      "signal": "GitHub 기여자↑·뉴스 확산",
-      "insight": "오픈소스 파급이 기업 도입 촉진"
-    }
-  ],
-  "summary": {
-    "market": "배포 속도가 승부처—생산성 스택 내 기본값 경쟁.",
-    "risk": "단기 리스크는 비용/안정성; 규제는 기준 정교화 흐름.",
-    "next": "온디바이스 확대·추론 단가 인하·기업 파일럿 발표 주시."
+[
+  {
+    "title": "Daily",
+    "content": "sample",
+    "date": "1970-01-01"
   }
-}
+]
