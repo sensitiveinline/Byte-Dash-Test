@@ -1,43 +1,85 @@
 {
+  "generated_at": "2025-08-17T13:59:05.375816+00:00",
   "items": [
     {
-      "title": "Gemini, Docs/Gmail 통합 확대",
-      "source": "Google AI Blog",
-      "url": "https://ai.googleblog.com/example",
-      "published_at": "2025-08-17T10:58:28.855060Z",
-      "summary": "워크스페이스 내 요약·자동화 기능 확대.",
-      "takeaway": "생산성 스택 침투 가속.",
-      "category": "모델·제품",
-      "ts": "2025-08-17T10:58:28.855060Z",
-      "ai": {
-        "insight": null,
-        "tags": [],
-        "confidence": 0.84,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "ai/summary"
+      "title": "Teaching the model: Designing LLM feedback loops that get smarter over time",
+      "url": "https://venturebeat.com/ai/teaching-the-model-designing-llm-feedback-loops-that-get-smarter-over-time/",
+      "summary": "How to close the loop between user behavior and LLM performance, and why human-in-the-loop systems are still essential in the age of gen AI.",
+      "host": "venturebeat.com",
+      "ts": 1755375300,
+      "rank_score": 0.816
     },
     {
-      "title": "LLaMA 기반 기업 배포 사례 증가",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/example",
-      "published_at": "2025-08-17T10:58:28.855060Z",
-      "summary": "엔터프라이즈 도입 속도 증가.",
-      "takeaway": "TCO 경쟁 본격화.",
-      "category": "정책·투자",
-      "ts": "2025-08-17T10:58:28.855060Z",
-      "ai": {
-        "insight": null,
-        "tags": [],
-        "confidence": 0.75,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "ai/summary"
+      "title": "The Download: Taiwan’s silicon shield, and ChatGPT’s personality misstep",
+      "url": "https://www.technologyreview.com/2025/08/15/1121920/the-download-taiwans-silicon-shield-and-chatgpts-personality-misstep/",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Taiwan’s “silicon shield” could be weakening Taiwanese politics increasingly revolves around one crucial question: Will China invade? China’s ruling party has wanted to seize Taiwan for more than half a century. But in&#8230;",
+      "host": "technologyreview.com",
+      "ts": 1755259800,
+      "rank_score": 0.795
+    },
+    {
+      "title": "Decoding Palantir, the Most Mysterious Company in Silicon Valley",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-palantir-most-mysterious-company-silicon-valley/",
+      "summary": "This week on Uncanny Valley, we talk about one of the most notorious American corporations. So what does Palantir actually do?",
+      "host": "wired.com",
+      "ts": 1755283573,
+      "rank_score": 0.793
+    },
+    {
+      "title": "Developers Say GPT-5 Is a Mixed Bag",
+      "url": "https://www.wired.com/story/gpt-5-coding-review-software-engineering/",
+      "summary": "Software engineers are finding that OpenAI’s new GPT-5 model is helping them think through coding problems—but isn’t much better at actual coding.",
+      "host": "wired.com",
+      "ts": 1755280069,
+      "rank_score": 0.79
+    },
+    {
+      "title": "Why GPT-4o’s sudden shutdown left people grieving",
+      "url": "https://www.technologyreview.com/2025/08/15/1121900/gpt4o-grief-ai-companion/",
+      "summary": "June had no idea that GPT-5 was coming. The Norwegian student was enjoying a late-night writing session last Thursday when her ChatGPT collaborator started acting strange. “It started forgetting everything, and it wrote really badly,” she says. “It was like a robot.” June, who asked that we use only her first name for privacy reasons,&#8230;",
+      "host": "technologyreview.com",
+      "ts": 1755254063,
+      "rank_score": 0.788
+    },
+    {
+      "title": "Indigenous knowledge meets artificial intelligence",
+      "url": "https://www.technologyreview.com/2025/08/15/1121342/native-american-art-technology-ai/",
+      "summary": "There is no word for art in most Native American languages. Instead, the closest terms speak not to objecthood but to action and intention. In Lakota, “wówačhiŋtȟaŋka” implies deep thought or reflection, while “wóčhekiye” suggests offering or prayer. Art is not separate from life; it is ceremony, instruction, design. Like architecture or code, it carries&#8230;",
+      "host": "technologyreview.com",
+      "ts": 1755252000,
+      "rank_score": 0.786
+    },
+    {
+      "title": "Taiwan’s “silicon shield” could be weakening",
+      "url": "https://www.technologyreview.com/2025/08/15/1121358/taiwan-silicon-shield-tsmc-china-chip-manufacturing/",
+      "summary": "One winter afternoon in a conference room in Taipei, a pair of twentysomething women dragged their friend across the floor. Lying on the ground in checkered pants and a brown sweatshirt, she was pretending to be either injured or dead. One friend picked her up by her arms, the other grabbed hold of her legs,&#8230;",
+      "host": "technologyreview.com",
+      "ts": 1755248400,
+      "rank_score": 0.782
+    },
+    {
+      "title": "Why US federal health agencies are abandoning mRNA vaccines",
+      "url": "https://www.technologyreview.com/2025/08/15/1121885/why-us-federal-health-agencies-are-abandoning-mrna-vaccines/",
+      "summary": "This time five years ago, we were in the throes of the covid-19 pandemic. By August 2020, we’d seen school closures, national lockdowns, and widespread panic. That year, the coronavirus was responsible for around 3 million deaths, according to the World Health Organization. Then came the vaccines. The first mRNA vaccines for covid were authorized for&#8230;",
+      "host": "technologyreview.com",
+      "ts": 1755248400,
+      "rank_score": 0.782
+    },
+    {
+      "title": "Should you delete your ChatGPT history? Why you might not have a choice. - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5\" target=\"_blank\">Should you delete your ChatGPT history? Why you might not have a choice.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">USA Today</font>",
+      "host": "news.google.com",
+      "ts": 1755437547,
+      "rank_score": 0.778
+    },
+    {
+      "title": "NDR 2025: Singaporeans remain key priority as AI reshapes economy, says PM Wong - CNA",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZXY2T3U4VEpCQkJZZGFobWExS1dSTGd4R0NDWTEtVnJyVGl6WFljbVcydGJkd1Y1TG40VUVUMTBsRWdHaGtXLVJhb3NoSnFERlhhM1Z5bkc0UmVubGh1VFRvTkNPZFdsZFdPemFNTUFpUmVxLUNVdWJ3dzlJcEJmRVpvMUVkeDdxRkF6bHJEZ0Jkdnp1cXRJazRZLUg3Q3JGMkRn?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQZXY2T3U4VEpCQkJZZGFobWExS1dSTGd4R0NDWTEtVnJyVGl6WFljbVcydGJkd1Y1TG40VUVUMTBsRWdHaGtXLVJhb3NoSnFERlhhM1Z5bkc0UmVubGh1VFRvTkNPZFdsZFdPemFNTUFpUmVxLUNVdWJ3dzlJcEJmRVpvMUVkeDdxRkF6bHJEZ0Jkdnp1cXRJazRZLUg3Q3JGMkRn?oc=5\" target=\"_blank\">NDR 2025: Singaporeans remain key priority as AI reshapes economy, says PM Wong</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNA</font>",
+      "host": "news.google.com",
+      "ts": 1755433500,
+      "rank_score": 0.777
     }
-  ],
-  "meta": {
-    "generatedAt": "2025-08-17T10:58:28.856245Z"
-  }
+  ]
 }

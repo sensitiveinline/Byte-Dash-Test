@@ -1,24 +1,8 @@
-export async function loadJSON(name) {
-  const paths = [
-    `./data/${name}`, `../data/${name}`, `/data/${name}`,
-    `./public/data/${name}`, `../public/data/${name}`
-  ];
-  for (const p of paths) {
-    try {
-      const r = await fetch(p, { cache: "no-store" });
-      if (r.ok) return await r.json();
-    } catch {}
-  }
-  return null;
+export async function loadJson(path){
+  const r = await fetch(path + "?t=" + Date.now(), {cache:"no-store"});
+  try { return await r.json(); } catch { return {}; }
 }
-export function unwrap(payload) {
-  if (!payload) return { items: [], meta: {} };
-  if (Array.isArray(payload)) return { items: payload, meta: {} };
-  return { items: payload.items || [], meta: payload.meta || {} };
-}
-export function fmtDelta(n) {
-  const v = Number(n ?? 0);
-  const cls = v > 0 ? "up" : v < 0 ? "down" : "flat";
-  const text = v > 0 ? `+${v.toFixed(1)}` : v < 0 ? v.toFixed(1) : "0.0";
-  return `<span class="delta ${cls}">${text}</span>`;
-}
+export function items(x){ return Array.isArray(x)?x:(x&&Array.isArray(x.items))?x.items:[]; }
+export function esc(s){ return (s??'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+export function fmt(n){ if(n==null||isNaN(n)) return "-"; return n.toLocaleString(); }
+export function when(x){ return x?.generated_at ? new Date(x.generated_at).toLocaleString() : ""; }
