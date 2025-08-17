@@ -1,98 +1,20 @@
-ㅇ<!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BYTE DASH — AI Dashboard (V2)</title>
-  <style>
-    :root { --bd:#e5e7eb; --fg:#0f172a; --mut:#64748b; --bg:#f8fafc; --ok:#16a34a; --warn:#f59e0b; --err:#dc2626; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); }
-    .wrap { max-width:1120px; margin:32px auto; padding:0 16px; }
-    header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
-    .mut { color:var(--mut); }
-    .pill { border:1px solid var(--bd); border-radius:999px; padding:4px 8px; font-size:12px; }
-    .btn { border:1px solid var(--bd); border-radius:10px; padding:6px 10px; background:#fff; cursor:pointer; }
-    .grid { display:grid; gap:16px; grid-template-columns:1fr; }
-    @media (min-width: 980px){ .grid { grid-template-columns: 1fr 1fr; } }
-    .card { background:#fff; border:1px solid var(--bd); border-radius:12px; padding:14px; }
-    .row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
-    .title { display:flex; align-items:center; gap:8px; font-weight:700; }
-    .list { display:flex; flex-direction:column; gap:10px; }
-    .item { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:8px 0; border-top:1px dashed var(--bd); }
-    .item:first-child { border-top:0; }
-    .rank { width:26px; height:26px; border:1px solid var(--bd); border-radius:999px; display:flex; align-items:center; justify-content:center; font-size:12px; flex:0 0 26px; }
-    .delta.up{color:var(--ok)} .delta.down{color:var(--err)} .delta.flat{color:var(--mut)}
-    .hint { font-size:12px; color:var(--mut); }
-    .insight { font-size:13px; color:#334155; }
-    .tabs { display:inline-flex; border:1px solid var(--bd); border-radius:10px; overflow:hidden; }
-    .tab { padding:6px 10px; background:#fff; cursor:pointer; font-size:13px; border-right:1px solid var(--bd); }
-    .tab:last-child{ border-right:0; }
-    .tab.active { background:#0ea5e9; color:white; border-color:#0ea5e9; }
-    .empty { color:var(--mut); font-style:italic; }
-    footer { margin-top:18px; font-size:12px; color:var(--mut); }
-  </style>
+  <title>BYTE-DASH</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div>
-        <h1 style="margin:0">BYTE DASH — AI Dashboard</h1>
-        <div class="mut">① 플랫폼 순위 · ② GitHub AI · ③ AI 뉴스 · ④ AI Note</div>
-      </div>
-      <div class="row">
-        <input id="q" placeholder="GitHub 검색 (repo·태그)" class="btn" style="width:260px" />
-        <button class="btn" id="refresh">새로고침</button>
-      </div>
-    </header>
-
-    <main class="grid">
-      <section class="card">
-        <div class="row">
-          <div class="title"><span class="pill">①</span>AI 플랫폼 순위</div>
-          <div class="hint" id="platMeta"></div>
-        </div>
-        <div id="platforms" class="list"></div>
-      </section>
-
-      <section class="card">
-        <div class="row">
-          <div class="title"><span class="pill">②</span>GitHub AI</div>
-          <div class="row">
-            <select id="repoSort" class="btn">
-              <option value="stars">Stars(30d)</option>
-              <option value="commits">Commits(30d)</option>
-              <option value="contributors">Contributors</option>
-            </select>
-          </div>
-        </div>
-        <div id="repos" class="list"></div>
-      </section>
-
-      <section class="card">
-        <div class="row">
-          <div class="title"><span class="pill">③</span>AI NEWS (Top10)</div>
-          <div class="hint" id="newsMeta"></div>
-        </div>
-        <div id="news" class="list"></div>
-      </section>
-
-      <section class="card">
-        <div class="row">
-          <div class="title"><span class="pill">④</span>AI Note</div>
-          <div class="tabs">
-            <button class="tab active" data-period="daily">Daily</button>
-            <button class="tab" data-period="weekly">Weekly</button>
-          </div>
-        </div>
-        <div id="note" class="list"></div>
-      </section>
-    </main>
-
-    <footer>Data → <code>/data/*.json</code> · 스키마: 배열 또는 <code>{items, meta}</code> 허용</footer>
-  </div>
-
-  <script type="module" src="./api.js"></script>
-  <script type="module" src="./app.js"></script>
+  <main class="wrap">
+    <h1>BYTE-DASH</h1>
+    <p id="status">✅ 페이지 로드 완료 (GitHub Pages /docs)</p>
+    <section>
+      <h2>AI Note (샘플)</h2>
+      <pre id="note">로딩 중…</pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
