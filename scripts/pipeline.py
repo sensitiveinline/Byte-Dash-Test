@@ -1,4 +1,7 @@
-from dotenv import load_dotenv; load_dotenv()
+try:
+    from dotenv import load_dotenv; load_dotenv()
+except Exception:
+    pass
 import json, pathlib, time
 
 from scripts.collectors import news_agent, github_agent
