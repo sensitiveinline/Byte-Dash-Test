@@ -1,32 +1,24 @@
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv; load_dotenv()
+import json, pathlib, time
 
-import json, os
-from scripts.agents import platforms_agent, github_agent, news_agent, note_agent
-from scripts.utils.schema import validate_and_fix, PlatformItem, RepoItem, NewsItem
+from scripts.collectors import news_agent, github_agent
+from scripts.scorers import platforms_agent
+from scripts.notes import note_agent
 
-DATA_DIR = "data"
+DATA = pathlib.Path("data"); DATA.mkdir(exist_ok=True)
 
-def save_json(path, payload):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2, default=str)
+def _save(path, obj):
+    p = pathlib.Path(path)
+    tmp = p.with_suffix(".tmp")
+    tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(p)
 
 def main():
-    platforms_raw = platforms_agent.run()
-    github_raw    = github_agent.run()
-    news_raw      = news_agent.run()
-
-    platforms_out = validate_and_fix(PlatformItem, platforms_raw)
-    github_out    = validate_and_fix(RepoItem, github_raw)
-    news_out      = validate_and_fix(NewsItem, news_raw)
-
-    save_json(f"{DATA_DIR}/platform_rankings.json", platforms_out)
-    save_json(f"{DATA_DIR}/github_trends.json", github_out)
-    save_json(f"{DATA_DIR}/news.json", news_out)
-
-    note = note_agent.run(platforms_out, github_out, news_out, period="daily")
-    save_json(f"{DATA_DIR}/ai_note.json", note)
+    news  = news_agent.run();              _save("data/news.json", news); time.sleep(1)
+    gh    = github_agent.run();            _save("data/github_trends.json", gh); time.sleep(1)
+    plats = platforms_agent.run();         _save("data/platform_rankings.json", plats); time.sleep(1)
+    note  = note_agent.run("data/news.json","data/github_trends.json","data/ai_note.json")
+    print("OK: data updated")
 
 if __name__ == "__main__":
     main()
