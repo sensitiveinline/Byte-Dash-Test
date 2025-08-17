@@ -1,3 +1,13 @@
+# --- import path & dotenv guards (auto-injected) ---
+import sys, pathlib
+# add repo root to sys.path so 'scripts.*' imports work no matter how it's run
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+try:
+    from dotenv import load_dotenv; load_dotenv()
+except Exception:
+    pass
+# --- end guards ---
+
 try:
     from dotenv import load_dotenv; load_dotenv()
 except Exception:
