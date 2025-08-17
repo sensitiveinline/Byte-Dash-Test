@@ -1,4 +1,113 @@
 {
-  "generated_at": "2025-08-17T15:14:51.310030+00:00",
-  "items": []
+  "generated_at": "2025-08-17T15:17:20.961820+00:00",
+  "items": [
+    {
+      "repo": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "pytorch/pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "tensorflow/tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "openai/openai-python",
+      "url": "https://github.com/openai/openai-python",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "mistralai/mistral-src",
+      "url": "https://github.com/mistralai/mistral-src",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "meta-llama/llama",
+      "url": "https://github.com/meta-llama/llama",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "mlx-examples/mlx-examples",
+      "url": "https://github.com/mlx-examples/mlx-examples",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "Lightning-AI/pytorch-lightning",
+      "url": "https://github.com/Lightning-AI/pytorch-lightning",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "scikit-learn/scikit-learn",
+      "url": "https://github.com/scikit-learn/scikit-learn",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "keras-team/keras",
+      "url": "https://github.com/keras-team/keras",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    },
+    {
+      "repo": "facebookresearch/faiss",
+      "url": "https://github.com/facebookresearch/faiss",
+      "new_stars30": 0,
+      "commits30": 0,
+      "contributors": 0,
+      "release_recency": 0,
+      "score": 1.0
+    }
+  ]
 }
