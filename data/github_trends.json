@@ -1,0 +1,667 @@
+{
+  "items": [
+    {
+      "repo": "netdata/netdata",
+      "url": "https://github.com/netdata/netdata",
+      "new_stars30": 75556,
+      "forks": 6120,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 1,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "rasbt/LLMs-from-scratch",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "new_stars30": 63913,
+      "forks": 8964,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 2,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "OpenBB-finance/OpenBB",
+      "url": "https://github.com/OpenBB-finance/OpenBB",
+      "new_stars30": 49543,
+      "forks": 4627,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 3,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "microsoft/AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "new_stars30": 39633,
+      "forks": 7686,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 4,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "photoprism/photoprism",
+      "url": "https://github.com/photoprism/photoprism",
+      "new_stars30": 38134,
+      "forks": 2124,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 5,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "LAION-AI/Open-Assistant",
+      "url": "https://github.com/LAION-AI/Open-Assistant",
+      "new_stars30": 37446,
+      "forks": 3294,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 6,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "google-research/google-research",
+      "url": "https://github.com/google-research/google-research",
+      "new_stars30": 36201,
+      "forks": 8160,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 7,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "explosion/spaCy",
+      "url": "https://github.com/explosion/spaCy",
+      "new_stars30": 32185,
+      "forks": 4563,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 8,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "lutzroeder/netron",
+      "url": "https://github.com/lutzroeder/netron",
+      "new_stars30": 31194,
+      "forks": 2972,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 9,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "AMAI-GmbH/AI-Expert-Roadmap",
+      "url": "https://github.com/AMAI-GmbH/AI-Expert-Roadmap",
+      "new_stars30": 30180,
+      "forks": 2533,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 10,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "Lightning-AI/pytorch-lightning",
+      "url": "https://github.com/Lightning-AI/pytorch-lightning",
+      "new_stars30": 29980,
+      "forks": 3558,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 11,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "modular/modular",
+      "url": "https://github.com/modular/modular",
+      "new_stars30": 24643,
+      "forks": 2682,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 12,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "spmallick/learnopencv",
+      "url": "https://github.com/spmallick/learnopencv",
+      "new_stars30": 22182,
+      "forks": 11717,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 13,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "deepset-ai/haystack",
+      "url": "https://github.com/deepset-ai/haystack",
+      "new_stars30": 21892,
+      "forks": 2306,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 14,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "mlflow/mlflow",
+      "url": "https://github.com/mlflow/mlflow",
+      "new_stars30": 21626,
+      "forks": 4759,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 15,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "recommenders-team/recommenders",
+      "url": "https://github.com/recommenders-team/recommenders",
+      "new_stars30": 20609,
+      "forks": 3240,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 16,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "huggingface/datasets",
+      "url": "https://github.com/huggingface/datasets",
+      "new_stars30": 20511,
+      "forks": 2899,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 17,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "meta-llama/llama-cookbook",
+      "url": "https://github.com/meta-llama/llama-cookbook",
+      "new_stars30": 17752,
+      "forks": 2588,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 18,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "patchy631/ai-engineering-hub",
+      "url": "https://github.com/patchy631/ai-engineering-hub",
+      "new_stars30": 17392,
+      "forks": 2898,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 19,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "arc53/DocsGPT",
+      "url": "https://github.com/arc53/DocsGPT",
+      "new_stars30": 16959,
+      "forks": 1781,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 20,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "dair-ai/ML-YouTube-Courses",
+      "url": "https://github.com/dair-ai/ML-YouTube-Courses",
+      "new_stars30": 16818,
+      "forks": 2030,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 21,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "mediar-ai/screenpipe",
+      "url": "https://github.com/mediar-ai/screenpipe",
+      "new_stars30": 15440,
+      "forks": 1191,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 22,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "iterative/dvc",
+      "url": "https://github.com/iterative/dvc",
+      "new_stars30": 14772,
+      "forks": 1244,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 23,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "stas00/ml-engineering",
+      "url": "https://github.com/stas00/ml-engineering",
+      "new_stars30": 14757,
+      "forks": 885,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 24,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "visenger/awesome-mlops",
+      "url": "https://github.com/visenger/awesome-mlops",
+      "new_stars30": 13274,
+      "forks": 1964,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 25,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "owainlewis/awesome-artificial-intelligence",
+      "url": "https://github.com/owainlewis/awesome-artificial-intelligence",
+      "new_stars30": 12175,
+      "forks": 2017,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 26,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "dair-ai/ML-Papers-of-the-Week",
+      "url": "https://github.com/dair-ai/ML-Papers-of-the-Week",
+      "new_stars30": 11781,
+      "forks": 718,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 27,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "neuml/txtai",
+      "url": "https://github.com/neuml/txtai",
+      "new_stars30": 11391,
+      "forks": 726,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 28,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "wandb/wandb",
+      "url": "https://github.com/wandb/wandb",
+      "new_stars30": 10224,
+      "forks": 766,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 29,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    },
+    {
+      "repo": "tensorzero/tensorzero",
+      "url": "https://github.com/tensorzero/tensorzero",
+      "new_stars30": 9596,
+      "forks": 639,
+      "contributors": null,
+      "score": 1.0,
+      "rank": 30,
+      "delta7": 0.0,
+      "ts": "2025-08-17T08:30:11.465910Z",
+      "ai": {
+        "insight": "오픈소스 인기도(Stars) 기반",
+        "tags": [
+          "gh-search"
+        ],
+        "confidence": 0.5,
+        "evidence": [],
+        "guardrail_flags": []
+      },
+      "noise_flag": false,
+      "method": "rule+ai/post-hoc"
+    }
+  ],
+  "meta": {
+    "generatedAt": "2025-08-17T08:30:11.469243Z"
+  }
+}

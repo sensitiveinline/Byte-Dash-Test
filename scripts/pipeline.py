@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import json, os
 from scripts.agents import platforms_agent, github_agent, news_agent, note_agent
 from scripts.utils.schema import validate_and_fix, PlatformItem, RepoItem, NewsItem
@@ -7,7 +10,7 @@ DATA_DIR = "data"
 def save_json(path, payload):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+        json.dump(payload, f, ensure_ascii=False, indent=2, default=str)
 
 def main():
     platforms_raw = platforms_agent.run()
