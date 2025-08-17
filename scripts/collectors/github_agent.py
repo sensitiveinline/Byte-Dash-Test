@@ -274,7 +274,39 @@ def enrich_metrics_precise(items, log):
     log.append(f"enrich_precise_ok={count}")
 
 
+
+def _get_json(url, headers, params=None, timeout=10):
+    """requests GET → (status_code, json_or_None)"""
+    import requests
+    r = requests.get(url, headers=headers, params=params or {}, timeout=timeout)
+    ct = r.headers.get("content-type","")
+    data = None
+    if ct.startswith("application/json"):
+        try: data = r.json()
+        except Exception: data = None
+    return r.status_code, data
+
+def _commit_activity_30d(owner_repo, headers, log, max_wait=30):
+    """
+    /stats/commit_activity:
+      52주 주간 total 배열 반환. 최신 4주 합 ≒ 최근 28일 커밋 근사.
+      처음엔 202(계산중)가 많이 뜨므로 짧게 재시도.
+    """
+    import time
+    url = f"{GH}/repos/{owner_repo}/stats/commit_activity"
+    waited = 0
+    while waited <= max_wait:
+        code, data = _get_json(url, headers)
+        if code == 202:
+            time.sleep(2); waited += 2; continue
+        if isinstance(data, list) and data:
+            return int(sum(w.get("total",0) for w in data[-4:]))
+        break
+    log.append(f"stats_commit_activity_waited={waited}")
+    return 0
+
 def static_fallback(log: list) -> List[Dict]:
+
     base = [
         "huggingface/transformers","pytorch/pytorch","tensorflow/tensorflow","langchain-ai/langchain",
         "openai/openai-python","mistralai/mistral-src","meta-llama/llama","mlx-examples/mlx-examples",

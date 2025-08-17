@@ -48,6 +48,7 @@ async function render(){
           <div class="kpi"><a target="_blank" href="${esc(it.url||"#")}">${esc(it.repo||it.id||"repo")}</a></div>
           <div class="mut">★${it.new_stars30??it.stars??0} · c${it.commits30??0} · u${it.contributors??0} · rel ${it.release_recency??0}</div>
         </div>
+        <div class="mut" style="font-size:12px;margin-top:2px;">${esc(it.description||""(no description)"")}</div>
         <div class="mut">score ${it.score??"-"}</div>
       </div>`).join("") || `<div class="mut">리포 데이터 없음</div>`;
   };
