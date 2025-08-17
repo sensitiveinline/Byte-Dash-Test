@@ -2,38 +2,93 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BYTE-DASH — AI Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Dashboard — MVP</title>
+  <style>
+    :root { --bd:#e5e7eb; --fg:#0f172a; --mut:#64748b; --bg:#f8fafc; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); }
+    .wrap { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
+    h1 { margin: 0 0 6px; } small { color:var(--mut); }
+    .grid { display:grid; gap:16px; grid-template-columns:1fr; }
+    @media (min-width: 960px){ .grid{ grid-template-columns:1fr 1fr; } }
+    .card { background:#fff; border:1px solid var(--bd); border-radius:14px; padding:16px; }
+    .row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+    .pill { border:1px solid var(--bd); border-radius:999px; padding:4px 8px; font-size:12px; color:#1f2937; }
+    .mut { color:var(--mut); font-size:12px; }
+    .btn { border:1px solid var(--bd); border-radius:10px; padding:6px 10px; background:#fff; cursor:pointer; }
+    .kpi { font-weight:600; }
+    ol.rank { margin:0; padding-left:0; list-style:none; }
+    li.rank-item { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:10px 0; }
+    .rank-left { display:flex; align-items:flex-start; gap:12px; min-width:0; }
+    .rank-num { width:28px; height:28px; border:1px solid var(--bd); border-radius:999px; display:flex; align-items:center; justify-content:center; font-size:12px; color:#111827; flex:0 0 28px; }
+    .rank-texts { display:flex; flex-direction:column; gap:2px; min-width:0; }
+    .rank-title { font-weight:700; line-height:1.1; }
+    .rank-sub { color:var(--mut); font-size:12px; }
+    .change { display:inline-flex; align-items:center; gap:6px; font-weight:600; }
+    .change svg { width:16px; height:16px; }
+    .change.up{color:#16a34a}.change.down{color:#dc2626}.change.flat{color:#6b7280}
+    .trend.down { transform: scaleY(-1); }
+    .news-card { border-top:1px solid var(--bd); padding-top:10px; margin-top:10px; }
+    .news-title { font-weight:700; }
+    .news-meta { color:var(--mut); font-size:12px; margin-top:2px; }
+    .note-line { border-top:1px dashed var(--bd); padding-top:8px; margin-top:8px; }
+    a { color:#2563eb; text-decoration:none; } a:hover{text-decoration:underline;}
+  </style>
 </head>
 <body>
-  <header class="bd-header">
-    <h1>BYTE-DASH</h1>
-    <p class="sub">✅ 페이지 로드 완료 (GitHub Pages /docs)</p>
-  </header>
+  <div class="wrap">
+    <header class="row" style="margin-bottom:16px;">
+      <div>
+        <h1>AI Dashboard — MVP</h1>
+        <small>① 플랫폼 순위 · ② GitHub · ③ 뉴스 · ④ AI Note</small>
+      </div>
+      <div class="row">
+        <input id="q" placeholder="GitHub 검색 (프로젝트/태그)" style="border:1px solid var(--bd); border-radius:10px; padding:6px 10px; width:260px;" />
+        <button class="btn" onclick="location.reload()">Refresh</button>
+      </div>
+    </header>
 
-  <main class="bd-container">
-    <section class="bd-card">
-      <h2>AI Note</h2>
-      <div id="ai-note" class="bd-list"></div>
-    </section>
+    <main class="grid" id="grid">
+      <section class="card">
+        <div class="row" style="margin-bottom:6px;">
+          <div class="row" style="gap:8px;"><div class="pill">①</div><strong>&nbsp;AI 플랫폼 순위</strong></div>
+          <span class="mut">자동 스코어링</span>
+        </div>
+        <ol id="platformList" class="rank"></ol>
+      </section>
 
-    <section class="bd-card">
-      <h2>AI NEWS (Top 10)</h2>
-      <div id="news" class="bd-list"></div>
-    </section>
+      <section class="card">
+        <div class="row" style="margin-bottom:6px;">
+          <div class="row" style="gap:8px;"><div class="pill">②</div><strong>&nbsp;GitHub AI</strong></div>
+          <select id="repoSort" class="btn">
+            <option value="score">Score</option>
+            <option value="stars">Stars(30d)</option>
+            <option value="commits30">Commits(30d)</option>
+          </select>
+        </div>
+        <div id="repoList"></div>
+      </section>
 
-    <section class="bd-card">
-      <h2>GitHub AI (Trending)</h2>
-      <div id="github" class="bd-list"></div>
-    </section>
+      <section class="card">
+        <div class="row" style="margin-bottom:6px;">
+          <div class="row" style="gap:8px;"><div class="pill">③</div><strong>&nbsp;AI NEWS</strong></div>
+          <span class="mut">Top10</span>
+        </div>
+        <div id="newsList"></div>
+      </section>
 
-    <section class="bd-card">
-      <h2>AI 플랫폼 순위</h2>
-      <div id="platform-rankings" class="bd-list"></div>
-    </section>
-  </main>
+      <section class="card">
+        <div class="row" style="margin-bottom:6px;">
+          <div class="row" style="gap:8px;"><div class="pill">④</div><strong>&nbsp;AI Note (오늘의 노트)</strong></div>
+          <span id="noteDate" class="mut"></span>
+        </div>
+        <div id="noteBox"></div>
+      </section>
+    </main>
+    <footer class="mut" style="margin-top:14px;">Data: ./data/*.json</footer>
+  </div>
 
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
