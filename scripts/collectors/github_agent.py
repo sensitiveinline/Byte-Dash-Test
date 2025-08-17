@@ -192,6 +192,88 @@ def enrich_metrics(items, log):
     log.append(f"enrich_ok={ok}")
 
 
+def enrich_metrics_precise(items, log):
+    """
+    GitHub REST API로 지표 보강:
+      - stars (총합)
+      - commits30 (지난 30일 커밋 수, 최대 200 카운트)
+      - contributors (대략치: /contributors?per_page=100 길이)
+      - release_recency: 최신 release published_at 또는 updated_at 기반 (최근일수 → 90-일수)
+    ※ 레이트리밋 고려해서 상위 10개 중 앞쪽 몇 개만 상세 조회.
+    """
+    import os, requests, datetime
+    from datetime import timezone, timedelta
+    token = os.getenv("GITHUB_TOKEN")
+    headers = {"User-Agent": "BYTE-DASH/1.0"}
+    if token:
+        headers["Authorization"] = f"token {token}"
+
+    now = datetime.datetime.now(timezone.utc)
+    since = (now - timedelta(days=30)).isoformat()
+
+    def get_json(url, params=None, timeout=10):
+        try:
+            r = requests.get(url, headers=headers, params=params or {}, timeout=timeout)
+            if r.status_code == 403:
+                # 레이트리밋
+                return None
+            if r.status_code >= 400:
+                return None
+            return r.json()
+        except Exception:
+            return None
+
+    # 너무 많이 때리지 않도록 최대 8개만 정밀 보강
+    count = 0
+    for it in items:
+        full = it.get("repo","")
+        if "/" not in full: continue
+        # /repos — stars & updated_at
+        meta = get_json(f"{GH}/repos/{full}")
+        if meta:
+            it["stars"] = int(meta.get("stargazers_count", it.get("stars",0)) or 0)
+            # 최신 release 우선
+            rel = get_json(f"{GH}/repos/{full}/releases/latest")
+            last_dt = None
+            if rel and isinstance(rel, dict) and rel.get("published_at"):
+                from datetime import datetime as dt
+                try:
+                    last_dt = dt.fromisoformat(rel["published_at"].replace("Z","+00:00"))
+                except Exception:
+                    last_dt = None
+            if not last_dt and meta.get("updated_at"):
+                from datetime import datetime as dt
+                try:
+                    last_dt = dt.fromisoformat(meta["updated_at"].replace("Z","+00:00"))
+                except Exception:
+                    last_dt = None
+            if last_dt:
+                days = max(0, (now - last_dt).days)
+                it["release_recency"] = max(0.0, 90.0 - float(days))
+
+        # /commits — 지난 30일 커밋 (최대 200개 카운트)
+        commits_cnt = 0
+        page = 1
+        while page <= 2:  # 두 페이지만
+            arr = get_json(f"{GH}/repos/{full}/commits", params={"since": since, "per_page": 100, "page": page})
+            if not isinstance(arr, list): break
+            commits_cnt += len(arr)
+            if len(arr) < 100: break
+            page += 1
+        it["commits30"] = max(int(it.get("commits30",0) or 0), commits_cnt)
+
+        # /contributors — 대략치 (첫 100명 길이)
+        contrib = get_json(f"{GH}/repos/{full}/contributors", params={"per_page": 100, "anon": "1"})
+        if isinstance(contrib, list) and contrib:
+            it["contributors"] = max(int(it.get("contributors",0) or 0), len(contrib))
+
+        count += 1
+        if count >= 8:
+            break
+
+    log.append(f"enrich_precise_ok={count}")
+
+
 def static_fallback(log: list) -> List[Dict]:
     base = [
         "huggingface/transformers","pytorch/pytorch","tensorflow/tensorflow","langchain-ai/langchain",
@@ -227,6 +309,11 @@ def run(write_to="data/github.json"):
         enrich_metrics(items, log)
     except Exception as e:
         log.append(f"enrich_error={type(e).__name__}")
+    # 정밀 보강 (토큰 있으면 더 정확)
+    try:
+        enrich_metrics_precise(items, log)
+    except Exception as e:
+        log.append(f"enrich_precise_error={type(e).__name__}")
 
     # 스코어 계산(기존 score 있으면 유지)
     for it in items:

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-17T15:24:05.553263+00:00",
+  "generated_at": "2025-08-17T15:27:57.761414+00:00",
   "items": [
     {
       "repo": "joshmoody24/make-github-great-again",
@@ -7,10 +7,10 @@
       "description": "",
       "stars": 1,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
+      "commits30": 10,
+      "contributors": 1,
       "release_recency": 88.0,
-      "score": 8.8
+      "score": 11.5
     },
     {
       "repo": "bahdotsh/wrkflw",
@@ -18,32 +18,32 @@
       "description": "",
       "stars": 1513,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
-      "release_recency": 90.0,
-      "score": 9.0
+      "commits30": 45,
+      "contributors": 4,
+      "release_recency": 86.0,
+      "score": 20.6
     },
     {
       "repo": "coleam00/Archon",
       "url": "https://github.com/coleam00/Archon",
       "description": "",
-      "stars": 7187,
+      "stars": 7190,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
+      "commits30": 19,
+      "contributors": 11,
       "release_recency": 90.0,
-      "score": 9.0
+      "score": 15.9
     },
     {
       "repo": "emcie-co/parlant",
       "url": "https://github.com/emcie-co/parlant",
       "description": "",
-      "stars": 4498,
+      "stars": 4502,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
+      "commits30": 200,
+      "contributors": 15,
       "release_recency": 90.0,
-      "score": 9.0
+      "score": 62.0
     },
     {
       "repo": "Shubhamsaboo/awesome-llm-apps",
@@ -51,10 +51,10 @@
       "description": "",
       "stars": 58596,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
+      "commits30": 27,
+      "contributors": 46,
       "release_recency": 90.0,
-      "score": 9.0
+      "score": 25.0
     },
     {
       "repo": "tsoding/nob.h",
@@ -62,10 +62,10 @@
       "description": "",
       "stars": 1559,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
+      "commits30": 12,
+      "contributors": 21,
       "release_recency": 90.0,
-      "score": 9.0
+      "score": 16.2
     },
     {
       "repo": "aliasrobotics/cai",
@@ -73,10 +73,10 @@
       "description": "",
       "stars": 2524,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
+      "commits30": 21,
+      "contributors": 73,
       "release_recency": 90.0,
-      "score": 9.0
+      "score": 28.9
     },
     {
       "repo": "PixiEditor/PixiEditor",
@@ -84,10 +84,10 @@
       "description": "",
       "stars": 3856,
       "new_stars30": 0,
-      "commits30": 0,
-      "contributors": 0,
-      "release_recency": 90.0,
-      "score": 9.0
+      "commits30": 114,
+      "contributors": 27,
+      "release_recency": 89.0,
+      "score": 42.8
     },
     {
       "repo": "dtyq/magic",
@@ -122,7 +122,8 @@
       "hn_items=2",
       "try:trending_fallback",
       "trending_items=10",
-      "enrich_ok=8"
+      "enrich_ok=8",
+      "enrich_precise_ok=8"
     ]
   }
 }
