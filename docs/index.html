@@ -2,27 +2,38 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BYTE-DASH — AI Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
+  <header class="bd-header">
     <h1>BYTE-DASH</h1>
-    <p>✅ 페이지 로드 완료 (GitHub Pages /docs)</p>
+    <p class="sub">✅ 페이지 로드 완료 (GitHub Pages /docs)</p>
+  </header>
 
-    <h2>AI Note</h2>
-    <pre id="ai-note"></pre>
+  <main class="bd-container">
+    <section class="bd-card">
+      <h2>AI Note</h2>
+      <div id="ai-note" class="bd-list"></div>
+    </section>
 
-    <h2>AI NEWS (Top10)</h2>
-    <pre id="news"></pre>
+    <section class="bd-card">
+      <h2>AI NEWS (Top 10)</h2>
+      <div id="news" class="bd-list"></div>
+    </section>
 
-    <h2>GitHub AI (Trending)</h2>
-    <pre id="github"></pre>
+    <section class="bd-card">
+      <h2>GitHub AI (Trending)</h2>
+      <div id="github" class="bd-list"></div>
+    </section>
 
-    <h2>AI 플랫폼 순위</h2>
-    <pre id="platform-rankings"></pre>
+    <section class="bd-card">
+      <h2>AI 플랫폼 순위</h2>
+      <div id="platform-rankings" class="bd-list"></div>
+    </section>
   </main>
+
   <script src="app.js"></script>
 </body>
 </html>

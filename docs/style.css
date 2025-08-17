@@ -3,3 +3,22 @@ body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Ari
 h1 { margin: 0 0 8px; }
 #status { color: #0a7; }
 pre { background:#111; color:#eee; padding:12px; border-radius:8px; overflow:auto; }
+
+/* -------- Byte-Dash card UI (minimal) -------- */
+body { margin:0; font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Noto Sans KR, Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:#0f172a; background:#f6f7fb; }
+.bd-header { padding:28px 20px 8px; }
+.bd-header h1 { margin:0 0 6px; font-size:32px; font-weight:800; letter-spacing:-0.02em; }
+.bd-header .sub { margin:0; color:#059669; font-weight:600; }
+
+.bd-container { max-width:1160px; margin:0 auto; padding:18px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; }
+.bd-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:18px 16px; box-shadow:0 2px 8px rgba(15,23,42,0.05); }
+.bd-card h2 { margin:0 0 12px; font-size:18px; font-weight:800; }
+
+.bd-list { display:flex; flex-direction:column; gap:12px; }
+.bd-item { border:1px solid #eef2f7; border-radius:12px; padding:12px; background:#fbfdff; }
+.bd-item-title { font-weight:700; margin-bottom:4px; }
+.bd-item-sub { color:#6b7280; font-size:12px; margin-bottom:6px; }
+.bd-item-desc { color:#374151; line-height:1.45; white-space:normal; }
+.bd-link { color:#2563eb; text-decoration:none; }
+.bd-link:hover { text-decoration:underline; }
+.bd-empty { color:#9ca3af; font-style:italic; }
