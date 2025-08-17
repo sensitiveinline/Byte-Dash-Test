@@ -1,4 +1,16 @@
-{ "items": [
-  { "repo": "openai/gpt-4", "stars": 250000 },
-  { "repo": "deepmind/alphafold", "stars": 180000 }
-], "meta": { "updated": "manual" } }
+{
+  "items": [
+    {
+      "repo": "openai/gpt-4",
+      "stars": 250000
+    },
+    {
+      "repo": "deepmind/alphafold",
+      "stars": 180000
+    }
+  ],
+  "meta": {
+    "updated": "2025-08-17T11:49:44Z",
+    "source": "pipeline-min"
+  }
+}
