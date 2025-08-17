@@ -1,0 +1,20 @@
+name: AI Dashboard Schedule
+on:
+  schedule:
+    - cron: '10 23,11 * * *'   # UTC 23:10 & 11:10 = KST 08:10 & 20:10
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -r requirements.txt
+      - run: python scripts/pipeline.py
+      - name: Commit data if changed
+        run: |
+          git config user.name "ai-bot"
+          git config user.email "bot@example.com"
+          git add data || true
+          git diff --cached --quiet || (git commit -m "data: update outputs" && git push)
