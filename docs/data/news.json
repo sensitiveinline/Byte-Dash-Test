@@ -1,43 +1,4 @@
-{
-  "items": [
-    {
-      "title": "Gemini, Docs/Gmail 통합 확대",
-      "source": "Google AI Blog",
-      "url": "https://ai.googleblog.com/example",
-      "published_at": "2025-08-17T10:58:28.855060Z",
-      "summary": "워크스페이스 내 요약·자동화 기능 확대.",
-      "takeaway": "생산성 스택 침투 가속.",
-      "category": "모델·제품",
-      "ts": "2025-08-17T10:58:28.855060Z",
-      "ai": {
-        "insight": null,
-        "tags": [],
-        "confidence": 0.84,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "ai/summary"
-    },
-    {
-      "title": "LLaMA 기반 기업 배포 사례 증가",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/example",
-      "published_at": "2025-08-17T10:58:28.855060Z",
-      "summary": "엔터프라이즈 도입 속도 증가.",
-      "takeaway": "TCO 경쟁 본격화.",
-      "category": "정책·투자",
-      "ts": "2025-08-17T10:58:28.855060Z",
-      "ai": {
-        "insight": null,
-        "tags": [],
-        "confidence": 0.75,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "ai/summary"
-    }
-  ],
-  "meta": {
-    "generatedAt": "2025-08-17T10:58:28.856245Z"
-  }
-}
+{ "items": [
+  { "title": "OpenAI launches new model", "link": "https://openai.com", "summary": "Latest multimodal release." },
+  { "title": "Google DeepMind breakthrough", "link": "https://deepmind.com", "summary": "New paper on RL." }
+], "meta": { "updated": "manual" } }
