@@ -1,87 +1,117 @@
-async function j(path){
-  const r = await fetch(path+"?t="+Date.now(), {cache:"no-store"});
-  try { return await r.json(); } catch { return {}; }
+// ---------- helpers ----------
+function esc(s){return (s??'').toString().replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function unesc(s){try{return (s??'').replace(/&#(\d+);/g,(m,n)=>String.fromCharCode(+n))}catch(e){return s??''}}
+function cut(s,n){s=s||'';return s.length>n?s.slice(0,n-1)+'…':s}
+async function loadJson(path){
+  try{
+    const r = await fetch(path, {cache:'no-store'});
+    if(!r.ok) throw new Error(path+' '+r.status);
+    const j = await r.json();
+    return Array.isArray(j) ? j : (j.items || []);
+  }catch(e){ console.error('load fail:', path, e); return []; }
 }
-function arr(x){ return Array.isArray(x)?x:(x&&Array.isArray(x.items))?x.items:[]; }
-function esc(s){ return (s??"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
-function unesc(s){ return (s||"").replaceAll("&#8217;","'").replaceAll("&amp;","&").replaceAll("&lt;","<").replaceAll("&gt;",">"); }
-function cut(s,n){ s=String(s||""); return s.length>n? s.slice(0,n)+"…" : s; }
 
-async function render(){
-  // 1) 데이터 로드
-  const plats = arr(await j("./data/platform_rankings.json")).slice(0,10);
-  const repos = arr(await j("./data/github.json")).slice(0,10);
-  const news  = arr(await j("./data/news.json")).slice(0,10);
-  const noteJ = await j("./data/ai_note.json");
+// ---------- render: Platforms ----------
+async function renderPlatforms(){
+  const el = document.querySelector('#platforms');
+  const hint = document.querySelector('#platMeta');
+  if(!el) return;
+  const items = await loadJson('./data/platform_rankings.json');
+  el.innerHTML='';
+  items.slice(0,10).forEach((it, i)=>{
+    const row = document.createElement('div'); row.className='item';
+    const d7 = +((it.delta7??0)); const arrow = d7>0?'up': d7<0?'down':'flat';
+    row.innerHTML = `
+      <div class="rank">${i+1}</div>
+      <div style="flex:1;min-width:0">
+        <div class="rank-title">${esc(it.name||it.id||'')}</div>
+        <div class="rank-sub">score ${it.score??0} · Δ7 ${d7.toFixed(1)}</div>
+      </div>
+      <div class="delta ${arrow}">${d7.toFixed(1)}</div>`;
+    el.appendChild(row);
+  });
+  if(hint) hint.textContent='자동 스코어링';
+}
 
-  // 2) 플랫폼
-  const $p = document.querySelector("#platformList");
-  if($p){
-    $p.innerHTML = plats.map((i,idx)=>`
-      <li class="rank-item">
-        <div class="rank-left">
-          <div class="rank-num">${i.rank ?? (idx+1)}</div>
-          <div class="rank-texts">
-            <div class="rank-title">${esc(i.name||i.id)}</div>
-            <div class="rank-sub">score ${i.score??"-"} · Δ7 ${i.delta7??"0.0"} ${ (i.sources||[]).slice(0,1).map(s=>{ try{ return `· <a target="_blank" href="${s.url}">${new URL(s.url).host}</a>`;}catch{return"";} }).join("")}</div>
-          </div>
+// ---------- render: GitHub ----------
+function sortRepos(items, key){
+  if(key==='commits') return items.sort((a,b)=>(b.commits30||0)-(a.commits30||0));
+  if(key==='contributors') return items.sort((a,b)=>(b.contributors||0)-(a.contributors||0));
+  return items.sort((a,b)=>((b.new_stars30??b.stars??0)- (a.new_stars30??a.stars??0)));
+}
+async function renderRepos(){
+  const el = document.querySelector('#repos');
+  const sel = document.querySelector('#repoSort');
+  if(!el) return;
+  let items = await loadJson('./data/github.json');
+  items = items.slice(0,10);
+  const apply = ()=>{
+    el.innerHTML='';
+    sortRepos(items, sel?.value||'stars').forEach(it=>{
+      const repo = esc(it.repo||it.id||'');
+      const url = esc(it.url||'#');
+      const stars = it.new_stars30 ?? it.stars ?? 0;
+      const c = it.commits30 ?? 0, u = it.contributors ?? 0, rel = it.release_recency ?? 0;
+      const score = Number(it.score||0).toFixed(1);
+      const desc = it.description ? `<div class="mut" style="font-size:12px;margin-top:2px;">${esc(it.description)}</div>` : '';
+      const row = document.createElement('div'); row.className='item';
+      row.innerHTML = `
+        <div style="flex:1;min-width:0">
+          <a href="${url}" target="_blank">${repo}</a>
+          <div class="mut">★${stars} · c${c} · u${u} · rel ${rel}</div>
+          ${desc}
         </div>
-        <div class="change ${i.delta7>0?'up':i.delta7<0?'down':'flat'}">
-          <svg class="trend" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 17l6-6 4 4 8-8"/></svg>
-          <span>${i.delta7>0?`+${i.delta7}`:(i.delta7??0)}</span>
-        </div>
-      </li>`).join("") || `<li class="rank-item"><div class="rank-texts">데이터 없음</div></li>`;
-  }
-
-  // 3) GitHub
-  const $r = document.querySelector("#repoList");
-  const $sort = document.querySelector("#repoSort");
-  const applyRepo = ()=>{
-    if(!$r) return;
-    const key = ($sort?.value)||"stars";
-    const map = {stars:"new_stars30", commits:"commits30", releases:"release_recency"};
-    const m = map[key] || "new_stars30";
-    const list = [...repos].sort((a,b)=> (b[m]||0)-(a[m]||0));
-    $r.innerHTML = (list.length? list:[]).map(it=>`
-      <div class="row" style="padding:8px 0; border-top:1px dashed var(--bd);">
-        <div style="min-width:0">
-          <div class="kpi"><a target="_blank" href="${esc(it.url||"#")}">${esc(it.repo||it.id||"repo")}</a></div>
-          <div class="mut">★${it.new_stars30??it.stars??0} · c${it.commits30??0} · u${it.contributors??0} · rel ${it.release_recency??0}</div>
-        </div>
-        <div class="mut" style="font-size:12px;margin-top:2px;">${esc(it.description||""(no description)"")}</div>
-        <div class="mut">score ${it.score??"-"}</div>
-      </div>`).join("") || `<div class="mut">리포 데이터 없음</div>`;
+        <div class="mut">score ${score}</div>`;
+      el.appendChild(row);
+    });
   };
-  applyRepo(); if($sort) $sort.onchange = applyRepo;
-
-  // 4) 뉴스 (요약 짧게)
-  const $n = document.querySelector("#newsList");
-  if($n){
-    $n.innerHTML = news.map(n=>`
-      <div style="padding:8px 0; border-top:1px dashed var(--bd);">
-        <div class="kpi"><a target="_blank" href="${esc(n.url)}">${esc(unesc(n.title||""))}</a></div>
-        <div class="mut">${esc(n.host||"")} — R ${n.rank_score??"-"}</div>
-        ${n.summary ? `<div class="mut" style="margin-top:4px;">${esc(cut(unesc(n.summary), 120))}</div>` : ""}
-      </div>`).join("") || `<div class="mut">뉴스 없음</div>`;
-  }
-
-  // 5) AI Note (5줄 기본, 더보기)
-  const $note = document.querySelector("#noteBox");
-  const $date = document.querySelector("#noteDate");
-  if($note){
-    const text = (arr(noteJ)[0]?.text || noteJ.items?.[0]?.text || "").trim();
-    if($date) $date.textContent = noteJ.date || noteJ.week_ending || "";
-    if(!text){ $note.innerHTML = `<div class="mut">노트 없음</div>`; return; }
-    const lines = text.split(/\r?\n/).filter(Boolean);
-    const short = lines.slice(0,5).map(l=>`<div>${esc(cut(l, 90))}</div>`).join("");
-    const full  = lines.map(l=>`<div>${esc(l)}</div>`).join("");
-    $note.innerHTML = short + (lines.length>5? ` <button class="btn" id="moreNote" style="margin-top:8px;">더보기</button>`:"");
-    const btn = document.querySelector("#moreNote");
-    if(btn){
-      let open=false;
-      btn.onclick=()=>{ open=!open; $note.innerHTML = open? full+` <button class="btn" id="lessNote" style="margin-top:8px;">접기</button>` : short+` <button class="btn" id="moreNote" style="margin-top:8px;">더보기</button>`; if(!open) document.querySelector("#moreNote").onclick=btn.onclick; else document.querySelector("#lessNote").onclick=btn.onclick; };
-    }
-  }
+  sel && sel.addEventListener('change', apply);
+  apply();
 }
 
-document.addEventListener("DOMContentLoaded", render);
+// ---------- render: News ----------
+async function renderNews(){
+  const el = document.querySelector('#news');
+  const hint = document.querySelector('#newsMeta');
+  if(!el) return;
+  const items = await loadJson('./data/news.json');
+  el.innerHTML='';
+  items.slice(0,10).forEach(n=>{
+    const host = esc(n.host || n.source || '');
+    const title = esc(unesc(n.title||''));
+    const url = esc(n.url||'#');
+    const summary = n.summary ? esc(cut(unesc(n.summary), 120)) : '';
+    const row = document.createElement('div'); row.className='item';
+    row.innerHTML = `
+      <div style="flex:1;min-width:0">
+        <div class="kpi">${title}
+          <a class="btn" style="margin-left:6px;padding:2px 6px;font-size:12px" target="_blank" href="${url}">바로가기</a>
+        </div>
+        ${summary?`<div class="mut" style="margin-top:4px;">${summary}</div>`:''}
+      </div>
+      <div class="mut">${host}</div>`;
+    el.appendChild(row);
+  });
+  if(hint) hint.textContent = 'Top10';
+}
+
+// ---------- render: Note ----------
+async function renderNote(){
+  const el = document.querySelector('#note');
+  if(!el) return;
+  const j = await loadJson('./data/ai_note.json');
+  const arr = Array.isArray(j)? j : (j.items||[]);
+  el.innerHTML = '';
+  if(!arr.length){ el.innerHTML = '<div class="empty">데이터 없음</div>'; return; }
+  arr.forEach(x=>{
+    const row = document.createElement('div'); row.className='item';
+    row.innerHTML = `<div class="insight" style="white-space:pre-line">${esc(x.text||'')}</div>`;
+    el.appendChild(row);
+  });
+}
+
+// ---------- boot ----------
+window.addEventListener('DOMContentLoaded', async ()=>{
+  await Promise.all([renderPlatforms(), renderRepos(), renderNews(), renderNote()]);
+  document.querySelector('#refresh')?.addEventListener('click', ()=>location.reload());
+});
