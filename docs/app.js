@@ -10,18 +10,17 @@ async function loadJson(path){
     return Array.isArray(j) ? j : (j.items || []);
   }catch(e){ console.error('load fail:', path, e); return []; }
 }
+function pick(...sels){ for(const s of sels){const n=document.querySelector(s); if(n) return n;} return null; }
 
-// ---------- render: Platforms (to #platformList <ol>) ----------
+// ---------- render: Platforms ----------
 async function renderPlatforms(){
-  const list = document.querySelector('#platformList'); // NEW
+  const list = document.querySelector('#platformList');
   if(!list) return;
   const items = await loadJson('data/platform_rankings.json');
   list.innerHTML='';
   items.slice(0,10).forEach((it, i)=>{
-    const d7 = +((it.delta7??0));
-    const arrow = d7>0?'up': d7<0?'down':'flat';
-    const li = document.createElement('li');
-    li.className = 'rank-item';
+    const d7 = +((it.delta7??0)); const arrow = d7>0?'up': d7<0?'down':'flat';
+    const li = document.createElement('li'); li.className='rank-item';
     li.innerHTML = `
       <div class="rank-left">
         <div class="rank-num">${i+1}</div>
@@ -30,17 +29,12 @@ async function renderPlatforms(){
           <div class="rank-sub">score ${Number(it.score??0).toFixed(1)} · Δ7 ${d7.toFixed(1)}</div>
         </div>
       </div>
-      <div class="change ${arrow}">
-        <svg viewBox="0 0 24 24" class="trend ${arrow==='down'?'down':''}">
-          <path d="M12 4 L12 20 M5 11 L12 4 L19 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        ${d7.toFixed(1)}
-      </div>`;
+      <div class="change ${arrow}">${d7.toFixed(1)}</div>`;
     list.appendChild(li);
   });
 }
 
-// ---------- render: GitHub (to #repoList) ----------
+// ---------- render: GitHub ----------
 function sortRepos(items, key){
   if(key==='commits') return items.sort((a,b)=>(b.commits30||0)-(a.commits30||0));
   if(key==='contributors') return items.sort((a,b)=>(b.contributors||0)-(a.contributors||0));
@@ -48,7 +42,7 @@ function sortRepos(items, key){
   return items.sort((a,b)=>((b.new_stars30??b.stars??0)-(a.new_stars30??a.stars??0)));
 }
 async function renderRepos(){
-  const el = document.querySelector('#repoList');    // NEW
+  const el = document.querySelector('#repoList');
   const sel = document.querySelector('#repoSort');
   if(!el) return;
   let items = await loadJson('data/github.json');
@@ -77,16 +71,18 @@ async function renderRepos(){
   apply();
 }
 
-// ---------- render: News (to #newsListList) ----------
-async function renderNews(){ console.info('renderNews start');
-  const el = document.querySelector('#newsListList');    // NEW
+// ---------- render: News ----------
+async function renderNews(){
+  console.info('renderNews start');
+  const el = pick('#newsList','#news','.news-list');
+  console.info('renderNews target:', !!el);
   if(!el) return;
-  const items = await loadJson('data/news.json'); console.info('news items:', items.length); console.info('news items:', items.length);
+  const items = await loadJson('data/news.json');
+  console.info('news items:', items.length);
   el.innerHTML='';
   items.slice(0,10).forEach(n=>{
     const host = esc(n.host || n.source || '');
-    const title = esc(unesc(n.title||''));
-    const url = esc(n.url||'#');
+    const title = esc(unesc(n.title||n.headline||'')); const url = esc(n.url||n.link||'#');
     const summary = n.summary ? esc(cut(unesc(n.summary), 140)) : '';
     const row = document.createElement('div'); row.className='item';
     row.innerHTML = `
@@ -101,15 +97,16 @@ async function renderNews(){ console.info('renderNews start');
   });
 }
 
-// ---------- render: Note (to #noteBoxBox) ----------
-async function renderNote(){ console.info('renderNote start');
-  const el = document.querySelector('#noteBoxBox');     // NEW
-  const dateEl = document.querySelector('#noteBoxDate');
+// ---------- render: Note ----------
+async function renderNote(){
+  console.info('renderNote start');
+  const el = pick('#noteBox','#note','.note-list'); const dateEl = document.querySelector('#noteDate');
+  console.info('renderNote target:', !!el);
   if(!el) return;
-  const arr = await loadJson('data/ai_note.json'); console.info('note items:', arr.length); console.info('note items:', arr.length);
+  const arr = await loadJson('data/ai_note.json');
+  console.info('note items:', arr.length);
   el.innerHTML = '';
   if(!arr.length){ el.innerHTML = '<div class="mut">데이터 없음</div>'; return; }
-  // 첫 항목에 날짜가 있다면 표시
   const first = arr[0]||{};
   if(dateEl && (first.date||first.created_at)) dateEl.textContent = (first.date||first.created_at);
   arr.forEach(x=>{
@@ -125,3 +122,5 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   await Promise.all([renderPlatforms(), renderRepos(), renderNews(), renderNote()]);
   document.querySelector('#refresh')?.addEventListener('click', ()=>location.reload());
 });
+// 보강: load 시에도 한 번 더
+window.addEventListener('load', ()=>{ renderNews(); renderNote(); });
