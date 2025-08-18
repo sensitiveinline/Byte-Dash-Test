@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-18T01:27:54.672807+00:00",
+  "generated_at": "2025-08-18T02:44:29.876982+00:00",
   "items": [
     {
       "title": "Teaching the model: Designing LLM feedback loops that get smarter over time",
@@ -7,23 +7,23 @@
       "summary": "How to close the loop between user behavior and LLM performance, and why human-in-the-loop systems are still essential in the age of gen AI.",
       "host": "venturebeat.com",
       "ts": 1755375300,
-      "rank_score": 0.801
+      "rank_score": 0.799
     },
     {
-      "title": "Space station crew gains AI assistant - China Daily - Global Edition",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcTFZTUw0MURWb3JRQUtyd0h2cngxTnJvQ3RrS1Itakd0bFJuVVM4clFiVGFwaEF4U2FTYWlQY3dZQ3k4MS00OVoxbVRPczNoNkNKVFh4bzVOV2NtN1Jwam9XTVpockRNT1VvWV8taW94TnpRZGlFeS1wT3JIUVRxb0dB?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOcTFZTUw0MURWb3JRQUtyd0h2cngxTnJvQ3RrS1Itakd0bFJuVVM4clFiVGFwaEF4U2FTYWlQY3dZQ3k4MS00OVoxbVRPczNoNkNKVFh4bzVOV2NtN1Jwam9XTVpockRNT1VvWV8taW94TnpRZGlFeS1wT3JIUVRxb0dB?oc=5\" target=\"_blank\">Space station crew gains AI assistant</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
-      "host": "news.google.com",
-      "ts": 1755479360,
-      "rank_score": 0.778
+      "title": "Show HN: OverType – A Markdown WYSIWYG editor that's just a textarea",
+      "url": "https://news.ycombinator.com/item?id=44932651",
+      "summary": "<p>Hi HN! I got so frustrated with modern WYSIWYG editors that I started to play around with building my own.<p>The problem I had was simple: I wanted a low-tech way to type styled text, but I didn't want to load a complex 500KB library, especially if I was going to initialize it dozens of times on the same page.<p>Markdown in a plain <textarea> was the best alternative to a full WYSIWYG, but its main drawback is how ugly it looks without any formatting. I can handle it, but my clients certainly can't.<p>I went down the ContentEditable rabbit hole for a few years, but always came to realize others had solved it better than I ever could.<p>I kept coming back to this problem: why can't I have a simple, performant, beautiful markdown editor? The best solution I ever saw was Ghost's split-screen editor: markdown on the left, preview on the right, with synchronized scrolling.<p>Then, about a year ago, an idea popped into my head: what if we layered a preview pane behind a <textarea>? If we aligned them perfectly, then even though you were only editing plain text, it would look and feel like you were editing rich text!<p>Of course, there would be downsides: you'd have to use a monospace font, all content would have to have the same font size, and all the markdown markup would have to be displayed in the final preview.<p>But those were tradeoffs I could live with.<p>Anyways, version 1 didn't go so well... it turns out it's harder to keep a textarea and a rendered preview in alignment than I thought. Here's what I discovered:<p>- Lists were hard to align - bullet points threw off character alignment. Solved with HTML entities (• for bullets) that maintain monospace width<p>- Not all monospace fonts are truly monospace - bold and italic text can have different widths even in \"monospace\" fonts, breaking the perfect overlay<p>- Embedding was a nightmare - any inherited CSS from parent pages (margin, padding, line-height) would shift alignment. Even a 1px shift completely broke the illusion<p>The solution was obsessive normalization:<p><pre><code>    // The entire trick: a transparent textarea over a preview div\n    layerElements(textarea, preview)\n    applyIdenticalSpacing(textarea, preview)\n\n    // Make textarea invisible but keep the cursor\n    textarea.style.background = 'transparent'\n    textarea.style.color = 'transparent'\n    textarea.style.caretColor = 'black'\n\n    // Keep them in sync\n    textarea.addEventListener('input', () => {\n      preview.innerHTML = parseMarkdown(textarea.value)\n      syncScroll(textarea, preview)\n    })\n</code></pre>\nA week ago I started playing with version 2 and discovered GitHub's  element, which handles markdown formatting in a plain <textarea> really well.<p>That experiment turned into OverType (<a href=\"https://overtype.dev\" rel=\"nofollow\">https://overtype.dev</a>), which I'm showing to you today -- it's a rich markdown editor that's really just a <textarea>. The key insight was that once you solve the alignment challenges, you get everything native textareas provide for free: undo/redo, mobile keyboard, accessibility, and native performance.<p>So far it works surprisingly well across browsers and mobile. I get performant rich text editing in one small package (45KB total). It's kind of a dumb idea, but it works! I'm planning to use it in all my projects and I'd like to keep it simple and minimal.<p>I would love it if you would kick the tires and let me know what you think of it. Happy editing!<p>---<p>Demo & docs: <a href=\"https://overtype.dev\" rel=\"nofollow\">https://overtype.dev</a><p>GitHub: <a href=\"https://github.com/panphora/overtype\" rel=\"nofollow\">https://github.com/panphora/overtype</a></p>\n<hr />\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44932651\">https://news.ycombinator.com/item?id=44932651</a></p>\n<p>Points: 199</p>\n<p># Comments: 56</p>",
+      "host": "news.ycombinator.com",
+      "ts": 1755447186,
+      "rank_score": 0.797
     },
     {
-      "title": "A Macao-Shanghai AI medical research centre has been launched - Macao News",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5\" target=\"_blank\">A Macao-Shanghai AI medical research centre has been launched</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Macao News</font>",
-      "host": "news.google.com",
-      "ts": 1755479492,
-      "rank_score": 0.778
+      "title": "Show HN: NextDNS Adds \"Bypass Age Verification\"",
+      "url": "https://news.ycombinator.com/item?id=44931824",
+      "summary": "<p>We just shipped a new feature in NextDNS: Bypass Age Verification.<p>More and more sites (especially adult ones) are now forcing users to upload IDs or selfies to continue. We think that’s a terrible idea: handing over government documents to random sites is a huge privacy risk.<p>This new setting workarounds those verification flows via DNS tricks. It’s available today to all users, including free accounts.<p>We’re curious how the HN community feels about this. Is it the right way to protect privacy online, or will it just provoke regulators to push harder?<p><a href=\"https://nextdns.io\" rel=\"nofollow\">https://nextdns.io</a></p>\n<hr />\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44931824\">https://news.ycombinator.com/item?id=44931824</a></p>\n<p>Points: 254</p>\n<p># Comments: 70</p>",
+      "host": "news.ycombinator.com",
+      "ts": 1755440962,
+      "rank_score": 0.796
     },
     {
       "title": "AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas - The Guardian",
@@ -34,11 +34,35 @@
       "rank_score": 0.777
     },
     {
+      "title": "How US ban fed China's AI boom - China Daily - Global Edition",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMkh2VlRNTFl4NDJ0eUdkUUtyd3VvMXlHU01qRDQ2SXBjR3JjZkdNWjR5NjBGVnlVUHN3SXRERmJDV3lEdGdpUUhla1E2SUg2M3RmZXZnU29Xc3pSQktETTlUck03bDJwdjVwU25JMDVSNXdPVGFpNXMxUTE0M1Q4X1VB?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQMkh2VlRNTFl4NDJ0eUdkUUtyd3VvMXlHU01qRDQ2SXBjR3JjZkdNWjR5NjBGVnlVUHN3SXRERmJDV3lEdGdpUUhla1E2SUg2M3RmZXZnU29Xc3pSQktETTlUck03bDJwdjVwU25JMDVSNXdPVGFpNXMxUTE0M1Q4X1VB?oc=5\" target=\"_blank\">How US ban fed China's AI boom</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
+      "host": "news.google.com",
+      "ts": 1755479949,
+      "rank_score": 0.777
+    },
+    {
+      "title": "A Macao-Shanghai AI medical research centre has been launched - Macao News",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5\" target=\"_blank\">A Macao-Shanghai AI medical research centre has been launched</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Macao News</font>",
+      "host": "news.google.com",
+      "ts": 1755479492,
+      "rank_score": 0.777
+    },
+    {
+      "title": "1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030 - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWRYRElCMTQ0TF90bC1WS1lNMktwUkdoVDdPVW5VQmRqd2V3b1h1SWluNUJ3R0VWelVnMV9EV0ZMQzVwR0kxNWFXZ3JnczdSeE5hMm5GRlR6dUo4UTFtZy1EUDJwRXpCdUR3VWoxNXhYQXpkM2ZweE94aHpHendVNU1OSERzdDlvUS1JS1B1QUFsaWU2T19B?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWRYRElCMTQ0TF90bC1WS1lNMktwUkdoVDdPVW5VQmRqd2V3b1h1SWluNUJ3R0VWelVnMV9EV0ZMQzVwR0kxNWFXZ3JnczdSeE5hMm5GRlR6dUo4UTFtZy1EUDJwRXpCdUR3VWoxNXhYQXpkM2ZweE94aHpHendVNU1OSERzdDlvUS1JS1B1QUFsaWU2T19B?oc=5\" target=\"_blank\">1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Motley Fool</font>",
+      "host": "news.google.com",
+      "ts": 1755480600,
+      "rank_score": 0.777
+    },
+    {
       "title": "Should you delete your ChatGPT history? Why you might not have a choice. - USA Today",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5\" target=\"_blank\">Should you delete your ChatGPT history? Why you might not have a choice.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">USA Today</font>",
       "host": "news.google.com",
-      "ts": 1755475347,
+      "ts": 1755480747,
       "rank_score": 0.777
     },
     {
@@ -46,40 +70,16 @@
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVXNWMjA1OGFUX2RGWnlweFl5VWpUQ2VnSW90ZWZqeEFhcUw0aUllQW1IcXN1ekwwYV84NVBkMHFMcGhhRjl4QUtnaUNmX2gwZG5SSC1HdERleEE1NFFfVjEzY09RV2tKbm5uVl9JdnBReWFWWTN0SjJ2bG5qbllUTFJQeWk3NUd3Vy1vcXRUX0lvZVk5cnFwa3I2S2VXVXlUY00wNUpDLTZuSTJDRWxDR3ZvNnMtM0pFUTJWMV80ZGNEaVZhZ3VxX0JNTzVWa3JjMHNIbXNKYmtZN1U?oc=5",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVXNWMjA1OGFUX2RGWnlweFl5VWpUQ2VnSW90ZWZqeEFhcUw0aUllQW1IcXN1ekwwYV84NVBkMHFMcGhhRjl4QUtnaUNmX2gwZG5SSC1HdERleEE1NFFfVjEzY09RV2tKbm5uVl9JdnBReWFWWTN0SjJ2bG5qbllUTFJQeWk3NUd3Vy1vcXRUX0lvZVk5cnFwa3I2S2VXVXlUY00wNUpDLTZuSTJDRWxDR3ZvNnMtM0pFUTJWMV80ZGNEaVZhZ3VxX0JNTzVWa3JjMHNIbXNKYmtZN1U?oc=5\" target=\"_blank\">Oracle Expands AI Partnership with Google Cloud with Gemini Models to Oracle Cloud Infra</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Fast Mode</font>",
       "host": "news.google.com",
-      "ts": 1755476515,
+      "ts": 1755475640,
       "rank_score": 0.777
     },
     {
-      "title": "Anthropic gives Claude AI power to end conversations as part of 'model welfare' push - MSN",
+      "title": "Anthropic gives Claude AI power to end conversations as part of 'model welfare' push - msn.com",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5\" target=\"_blank\">Anthropic gives Claude AI power to end conversations as part of 'model welfare' push</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5\" target=\"_blank\">Anthropic gives Claude AI power to end conversations as part of 'model welfare' push</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">msn.com</font>",
       "host": "news.google.com",
       "ts": 1755474181,
       "rank_score": 0.777
-    },
-    {
-      "title": "I Asked ChatGPT How To Turn $10 Into $1 Million: Here’s What It Said - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1QOUVNMFpnOFJGVUdyaTJyMWc2cXVRcElPeGhQYWV2cDREZFJEaFBXZXhjUjZfdF93NENoa1Brb1lQUDVvQVBBSldBTzN1ZXBBUWhMOXFUWTB0ZzZGb3pfcFZHaGxwVXBpZjVVdjFfaDQtRGZ2MmRuQg?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE1QOUVNMFpnOFJGVUdyaTJyMWc2cXVRcElPeGhQYWV2cDREZFJEaFBXZXhjUjZfdF93NENoa1Brb1lQUDVvQVBBSldBTzN1ZXBBUWhMOXFUWTB0ZzZGb3pfcFZHaGxwVXBpZjVVdjFfaDQtRGZ2MmRuQg?oc=5\" target=\"_blank\">I Asked ChatGPT How To Turn $10 Into $1 Million: Here’s What It Said</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
-      "host": "news.google.com",
-      "ts": 1755468077,
-      "rank_score": 0.776
-    },
-    {
-      "title": "Is Artificial Intelligence Impossible? Aristotle & Aquinas on AI - TheCollector",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbEdmbldBS0lXeVdFTThYa05uMlE3T3ZQTmRFSlMwcmR3WEozMzg4ME9YYmxldDBZYTZlWGJGdlBKZ1AxMDY0a25ucVJ4LXBMX19UQnlxYllOenRNTzZUTlFtUVAxSDlMckE3cFVPdEU4NnhMNXpQcW1DNTZmWjFuWU5xYjN1UXpVSHc?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQbEdmbldBS0lXeVdFTThYa05uMlE3T3ZQTmRFSlMwcmR3WEozMzg4ME9YYmxldDBZYTZlWGJGdlBKZ1AxMDY0a25ucVJ4LXBMX19UQnlxYllOenRNTzZUTlFtUVAxSDlMckE3cFVPdEU4NnhMNXpQcW1DNTZmWjFuWU5xYjN1UXpVSHc?oc=5\" target=\"_blank\">Is Artificial Intelligence Impossible? Aristotle & Aquinas on AI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TheCollector</font>",
-      "host": "news.google.com",
-      "ts": 1755461725,
-      "rank_score": 0.775
-    },
-    {
-      "title": "If AI takes most of our jobs, money as we know it will be over. What then? - The Conversation",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWG42MUxBNlUyLWw1Q0FPVHlad3MyRGtvUUgtbWlmUjNMWElsN2hRUmJtVlZVNmN3WnIxUTU0N1JSMzRkZDJYM0d1TUYwQVdIQ1M3cVhmRlE0aUVKckZGZXczWWdBYUJRbXFheUNkb002alNOM05pTG9GU3hkS192Nk5XX3l4WlBHeHdYNkxHR3k5T2xFSXBoV1RScEpkS1J6U2kwOGxLX2kwQQ?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWG42MUxBNlUyLWw1Q0FPVHlad3MyRGtvUUgtbWlmUjNMWElsN2hRUmJtVlZVNmN3WnIxUTU0N1JSMzRkZDJYM0d1TUYwQVdIQ1M3cVhmRlE0aUVKckZGZXczWWdBYUJRbXFheUNkb002alNOM05pTG9GU3hkS192Nk5XX3l4WlBHeHdYNkxHR3k5T2xFSXBoV1RScEpkS1J6U2kwOGxLX2kwQQ?oc=5\" target=\"_blank\">If AI takes most of our jobs, money as we know it will be over. What then?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conversation</font>",
-      "host": "news.google.com",
-      "ts": 1755457426,
-      "rank_score": 0.775
     }
   ]
 }
