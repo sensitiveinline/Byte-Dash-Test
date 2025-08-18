@@ -13,22 +13,33 @@
 
     /* ===== Grid (PC: 2×2 동일 사이즈, 한 화면) ===== */
     .grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      height: calc(100vh - 140px); /* 헤더/푸터 제외 */
-    }
-    /* ===== Card 공통 ===== */
-    .card {
-      background:#fff; border:1px solid var(--bd); border-radius:14px;
-      padding:16px; display:flex; flex-direction:column; min-height:0;
-    }
-    .row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
-    .pill { border:1px solid var(--bd); border-radius:999px; padding:4px 8px; font-size:12px; color:#1f2937; }
-    .mut { color:var(--mut); font-size:12px; }
-    .btn { border:1px solid var(--bd); border-radius:10px; padding:6px 10px; background:#fff; cursor:pointer; }
-    .kpi { font-weight:600; }
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: calc(100vh - 140px);
+
+  height: calc(100vh - 140px);
+ /* 행도 균등하게 */
+  height: calc(100vh - 140px);        /* 화면에 2x2 꽉 채우기 */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+
+  overflow: auto;
+      /* grid 균등 유지 */
+  overflow: auto;     /* 내용 넘치면 스크롤 */
+}
+
+
 
     /* 목록·랭킹 */
     ol.rank { margin:0; padding-left:0; list-style:none; }
