@@ -356,3 +356,18 @@ def run(write_to="data/github.json"):
     out = {"generated_at": now_iso(), "items": items, "meta": {"log": log}}
     write_json(write_to, out)
     return out
+
+
+def add_star_deltas(items, log):
+    """/repos -> stargazers_count만으로는 증가량을 정확히 못 구한다.
+       스냅샷(data/github_trends.json)을 활용해 7d/30d 근사."""
+    import json, os
+    from pathlib import Path
+    snap = {}
+    sp = Path("data/github_trends.json")
+    if sp.exists():
+        try:
+            snap = json.loads(sp.read_text())
+        except Exception:
+            snap = {}
+    hist = { (it.get("repo") or it.get("url","")): it for it in snap.get("items",[]) }
