@@ -8,16 +8,29 @@
     :root { --bd:#e5e7eb; --fg:#0f172a; --mut:#64748b; --bg:#f8fafc; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); }
-    .wrap { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
+    .wrap { max-width: 1200px; margin: 32px auto; padding: 0 16px; }
     h1 { margin: 0 0 6px; } small { color:var(--mut); }
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);height:calc(100vh - 140px);} 
-    @media (min-width: 960px){ .grid{ grid-template-columns:1fr 1fr; } }
-    .card{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px;display:flex;flex-direction:column;min-height:0;} 
+
+    /* ===== Grid (PC: 2×2 동일 사이즈, 한 화면) ===== */
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: calc(100vh - 140px); /* 헤더/푸터 제외 */
+    }
+    /* ===== Card 공통 ===== */
+    .card {
+      background:#fff; border:1px solid var(--bd); border-radius:14px;
+      padding:16px; display:flex; flex-direction:column; min-height:0;
+    }
     .row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
     .pill { border:1px solid var(--bd); border-radius:999px; padding:4px 8px; font-size:12px; color:#1f2937; }
     .mut { color:var(--mut); font-size:12px; }
     .btn { border:1px solid var(--bd); border-radius:10px; padding:6px 10px; background:#fff; cursor:pointer; }
     .kpi { font-weight:600; }
+
+    /* 목록·랭킹 */
     ol.rank { margin:0; padding-left:0; list-style:none; }
     li.rank-item { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:10px 0; }
     .rank-left { display:flex; align-items:flex-start; gap:12px; min-width:0; }
@@ -26,10 +39,17 @@
     .rank-title { font-weight:700; line-height:1.1; }
     .rank-sub { color:var(--mut); font-size:12px; }
     .change { display:inline-flex; align-items:center; gap:6px; font-weight:600; }
-    .change svg { width:16px; height:16px; }
     .change.up{color:#16a34a}.change.down{color:#dc2626}.change.flat{color:#6b7280}
-    .trend.down { transform: scaleY(-1); }
-    .item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--bd);}
+
+    /* 카드 내부 스크롤 영역 */
+    .card-body { flex:1; min-height:0; overflow:auto; padding-right:4px; }
+    .item { display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-top:1px solid var(--bd); }
+
+    /* ===== 모바일(≤768px): 1열 스택, 자동 높이 ===== */
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
+      .card { min-height: 220px; }
+    }
   </style>
 </head>
 <body>
@@ -41,50 +61,68 @@
       </div>
       <div class="row">
         <input id="q" placeholder="GitHub 검색 (프로젝트/태그)" style="border:1px solid var(--bd); border-radius:10px; padding:6px 10px; width:260px;" />
-        <button class="btn" onclick="location.reload()">Refresh</button>
+        <button id="refresh" class="btn">Refresh</button>
       </div>
     </header>
 
     <main class="grid" id="grid">
+      <!-- ① 플랫폼 -->
       <section class="card">
         <div class="row" style="margin-bottom:6px;">
           <div class="row" style="gap:8px;"><div class="pill">①</div><strong>&nbsp;AI 플랫폼 순위</strong></div>
-          <span class="mut">자동 스코어링</span> <button id="morePlat" class="btn">더보기</button> <button id="morePlat" class="btn">더보기</button>
+          <div class="row" style="gap:8px;">
+            <span id="platMeta" class="mut">자동 스코어링</span>
+            <button id="morePlat" class="btn">더보기</button>
+          </div>
         </div>
         <ol id="platformList" class="rank card-body"></ol>
       </section>
 
+      <!-- ② GitHub -->
       <section class="card">
         <div class="row" style="margin-bottom:6px;">
           <div class="row" style="gap:8px;"><div class="pill">②</div><strong>&nbsp;GitHub AI</strong></div>
-          <select id="repoSort" class="btn">
-            <option value="stars">Stars(7d)</option>
-            <option value="commits">Commits(30d)</option>
-            <option value="releases">Releases(90d)</option>
-          </select> <button id="moreRepo" class="btn" style="margin-left:6px;">더보기</button>
+          <div class="row" style="gap:6px;">
+            <select id="repoSort" class="btn">
+              <option value="stars">Stars(7d)</option>
+              <option value="commits">Commits(30d)</option>
+              <option value="releases">Releases(90d)</option>
+            </select>
+            <button id="moreRepo" class="btn">더보기</button>
+          </div>
         </div>
         <div id="repoList" class="card-body"></div>
       </section>
 
+      <!-- ③ 뉴스 -->
       <section class="card">
         <div class="row" style="margin-bottom:6px;">
           <div class="row" style="gap:8px;"><div class="pill">③</div><strong>&nbsp;AI NEWS</strong></div>
-          <span class="mut">요약</span> <button id="moreNews" class="btn">더보기</button> <button id="moreNews" class="btn">더보기</button>
+          <div class="row" style="gap:8px;">
+            <span id="newsMeta" class="mut">요약</span>
+            <button id="moreNews" class="btn">더보기</button>
+          </div>
         </div>
         <div id="newsList" class="card-body"></div>
       </section>
 
+      <!-- ④ 노트 -->
       <section class="card">
         <div class="row" style="margin-bottom:6px;">
           <div class="row" style="gap:8px;"><div class="pill">④</div><strong>&nbsp;AI Note (오늘의 노트)</strong></div>
-          <span id="noteDate" class="mut"></span> <button id="moreNote" class="btn">더보기</button>
+          <div class="row" style="gap:8px;">
+            <span id="noteDate" class="mut"></span>
+            <button id="moreNote" class="btn">더보기</button>
+          </div>
         </div>
         <div id="noteBox" class="card-body"></div>
       </section>
     </main>
-    <footer class="mut" style="margin-top:14px;">Data: data/*.json</footer>
+
+    <footer class="mut" style="margin-top:14px;">Data: <code>data/*.json</code></footer>
   </div>
 
-  <!-- 중요: defer 로드 -->
-  <script src="app.js?v=mvp12" defer></script></body>
+  <!-- 스크립트 (캐시버스터 mvp12) -->
+  <script src="app.js?v=mvp13" defer></script>
+</body>
 </html>
