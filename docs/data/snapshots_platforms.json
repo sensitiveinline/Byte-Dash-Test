@@ -38,6 +38,51 @@
           "score": 50.0
         }
       ]
+    },
+    {
+      "ts": "2025-08-18T04:38:11.804124+00:00",
+      "items": [
+        {
+          "id": "gemini",
+          "score": 50.0
+        },
+        {
+          "id": "chatgpt",
+          "score": 50.0
+        },
+        {
+          "id": "claude",
+          "score": 50.0
+        },
+        {
+          "id": "llama",
+          "score": 50.0
+        },
+        {
+          "id": "mistral",
+          "score": 50.0
+        },
+        {
+          "id": "perplexity",
+          "score": 50.0
+        },
+        {
+          "id": "cohere",
+          "score": 50.0
+        },
+        {
+          "id": "stability",
+          "score": 50.0
+        },
+        {
+          "id": "baidu",
+          "score": 50.0
+        },
+        {
+          "id": "grok",
+          "score": 50.0
+        }
+      ]
     }
   ]
 }

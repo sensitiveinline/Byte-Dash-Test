@@ -1,76 +1,60 @@
 {
-  "generated_at": "2025-08-18T03:00:42.066879+00:00",
+  "generated_at": "2025-08-18T04:37:51.189911+00:00",
   "items": [
+    {
+      "title": "Show HN: OverType – A Markdown WYSIWYG editor that's just a textarea",
+      "url": "https://news.ycombinator.com/item?id=44932651",
+      "summary": "<p>Hi HN! I got so frustrated with modern WYSIWYG editors that I started to play around with building my own.<p>The problem I had was simple: I wanted a low-tech way to type styled text, but I didn't want to load a complex 500KB library, especially if I was going to initialize it dozens of times on the same page.<p>Markdown in a plain <textarea> was the best alternative to a full WYSIWYG, but its main drawback is how ugly it looks without any formatting. I can handle it, but my clients certainly can't.<p>I went down the ContentEditable rabbit hole for a few years, but always came to realize others had solved it better than I ever could.<p>I kept coming back to this problem: why can't I have a simple, performant, beautiful markdown editor? The best solution I ever saw was Ghost's split-screen editor: markdown on the left, preview on the right, with synchronized scrolling.<p>Then, about a year ago, an idea popped into my head: what if we layered a preview pane behind a <textarea>? If we aligned them perfectly, then even though you were only editing plain text, it would look and feel like you were editing rich text!<p>Of course, there would be downsides: you'd have to use a monospace font, all content would have to have the same font size, and all the markdown markup would have to be displayed in the final preview.<p>But those were tradeoffs I could live with.<p>Anyways, version 1 didn't go so well... it turns out it's harder to keep a textarea and a rendered preview in alignment than I thought. Here's what I discovered:<p>- Lists were hard to align - bullet points threw off character alignment. Solved with HTML entities (• for bullets) that maintain monospace width<p>- Not all monospace fonts are truly monospace - bold and italic text can have different widths even in \"monospace\" fonts, breaking the perfect overlay<p>- Embedding was a nightmare - any inherited CSS from parent pages (margin, padding, line-height) would shift alignment. Even a 1px shift completely broke the illusion<p>The solution was obsessive normalization:<p><pre><code>    // The entire trick: a transparent textarea over a preview div\n    layerElements(textarea, preview)\n    applyIdenticalSpacing(textarea, preview)\n\n    // Make textarea invisible but keep the cursor\n    textarea.style.background = 'transparent'\n    textarea.style.color = 'transparent'\n    textarea.style.caretColor = 'black'\n\n    // Keep them in sync\n    textarea.addEventListener('input', () => {\n      preview.innerHTML = parseMarkdown(textarea.value)\n      syncScroll(textarea, preview)\n    })\n</code></pre>\nA week ago I started playing with version 2 and discovered GitHub's  element, which handles markdown formatting in a plain <textarea> really well.<p>That experiment turned into OverType (<a href=\"https://overtype.dev\" rel=\"nofollow\">https://overtype.dev</a>), which I'm showing to you today -- it's a rich markdown editor that's really just a <textarea>. The key insight was that once you solve the alignment challenges, you get everything native textareas provide for free: undo/redo, mobile keyboard, accessibility, and native performance.<p>So far it works surprisingly well across browsers and mobile. I get performant rich text editing in one small package (45KB total). It's kind of a dumb idea, but it works! I'm planning to use it in all my projects and I'd like to keep it simple and minimal.<p>I would love it if you would kick the tires and let me know what you think of it. Happy editing!<p>---<p>Demo & docs: <a href=\"https://overtype.dev\" rel=\"nofollow\">https://overtype.dev</a><p>GitHub: <a href=\"https://github.com/panphora/overtype\" rel=\"nofollow\">https://github.com/panphora/overtype</a></p>\n<hr />\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44932651\">https://news.ycombinator.com/item?id=44932651</a></p>\n<p>Points: 230</p>\n<p># Comments: 66</p>",
+      "host": "news.ycombinator.com",
+      "ts": 1755447186,
+      "rank_score": 0.796
+    },
     {
       "title": "Teaching the model: Designing LLM feedback loops that get smarter over time",
       "url": "https://venturebeat.com/ai/teaching-the-model-designing-llm-feedback-loops-that-get-smarter-over-time/",
       "summary": "How to close the loop between user behavior and LLM performance, and why human-in-the-loop systems are still essential in the age of gen AI.",
       "host": "venturebeat.com",
       "ts": 1755375300,
-      "rank_score": 0.798
-    },
-    {
-      "title": "Show HN: OverType – A Markdown WYSIWYG editor that's just a textarea",
-      "url": "https://news.ycombinator.com/item?id=44932651",
-      "summary": "<p>Hi HN! I got so frustrated with modern WYSIWYG editors that I started to play around with building my own.<p>The problem I had was simple: I wanted a low-tech way to type styled text, but I didn't want to load a complex 500KB library, especially if I was going to initialize it dozens of times on the same page.<p>Markdown in a plain <textarea> was the best alternative to a full WYSIWYG, but its main drawback is how ugly it looks without any formatting. I can handle it, but my clients certainly can't.<p>I went down the ContentEditable rabbit hole for a few years, but always came to realize others had solved it better than I ever could.<p>I kept coming back to this problem: why can't I have a simple, performant, beautiful markdown editor? The best solution I ever saw was Ghost's split-screen editor: markdown on the left, preview on the right, with synchronized scrolling.<p>Then, about a year ago, an idea popped into my head: what if we layered a preview pane behind a <textarea>? If we aligned them perfectly, then even though you were only editing plain text, it would look and feel like you were editing rich text!<p>Of course, there would be downsides: you'd have to use a monospace font, all content would have to have the same font size, and all the markdown markup would have to be displayed in the final preview.<p>But those were tradeoffs I could live with.<p>Anyways, version 1 didn't go so well... it turns out it's harder to keep a textarea and a rendered preview in alignment than I thought. Here's what I discovered:<p>- Lists were hard to align - bullet points threw off character alignment. Solved with HTML entities (• for bullets) that maintain monospace width<p>- Not all monospace fonts are truly monospace - bold and italic text can have different widths even in \"monospace\" fonts, breaking the perfect overlay<p>- Embedding was a nightmare - any inherited CSS from parent pages (margin, padding, line-height) would shift alignment. Even a 1px shift completely broke the illusion<p>The solution was obsessive normalization:<p><pre><code>    // The entire trick: a transparent textarea over a preview div\n    layerElements(textarea, preview)\n    applyIdenticalSpacing(textarea, preview)\n\n    // Make textarea invisible but keep the cursor\n    textarea.style.background = 'transparent'\n    textarea.style.color = 'transparent'\n    textarea.style.caretColor = 'black'\n\n    // Keep them in sync\n    textarea.addEventListener('input', () => {\n      preview.innerHTML = parseMarkdown(textarea.value)\n      syncScroll(textarea, preview)\n    })\n</code></pre>\nA week ago I started playing with version 2 and discovered GitHub's  element, which handles markdown formatting in a plain <textarea> really well.<p>That experiment turned into OverType (<a href=\"https://overtype.dev\" rel=\"nofollow\">https://overtype.dev</a>), which I'm showing to you today -- it's a rich markdown editor that's really just a <textarea>. The key insight was that once you solve the alignment challenges, you get everything native textareas provide for free: undo/redo, mobile keyboard, accessibility, and native performance.<p>So far it works surprisingly well across browsers and mobile. I get performant rich text editing in one small package (45KB total). It's kind of a dumb idea, but it works! I'm planning to use it in all my projects and I'd like to keep it simple and minimal.<p>I would love it if you would kick the tires and let me know what you think of it. Happy editing!<p>---<p>Demo & docs: <a href=\"https://overtype.dev\" rel=\"nofollow\">https://overtype.dev</a><p>GitHub: <a href=\"https://github.com/panphora/overtype\" rel=\"nofollow\">https://github.com/panphora/overtype</a></p>\n<hr />\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44932651\">https://news.ycombinator.com/item?id=44932651</a></p>\n<p>Points: 203</p>\n<p># Comments: 56</p>",
-      "host": "news.ycombinator.com",
-      "ts": 1755447186,
-      "rank_score": 0.797
+      "rank_score": 0.795
     },
     {
       "title": "Show HN: NextDNS Adds \"Bypass Age Verification\"",
       "url": "https://news.ycombinator.com/item?id=44931824",
-      "summary": "<p>We just shipped a new feature in NextDNS: Bypass Age Verification.<p>More and more sites (especially adult ones) are now forcing users to upload IDs or selfies to continue. We think that’s a terrible idea: handing over government documents to random sites is a huge privacy risk.<p>This new setting workarounds those verification flows via DNS tricks. It’s available today to all users, including free accounts.<p>We’re curious how the HN community feels about this. Is it the right way to protect privacy online, or will it just provoke regulators to push harder?<p><a href=\"https://nextdns.io\" rel=\"nofollow\">https://nextdns.io</a></p>\n<hr />\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44931824\">https://news.ycombinator.com/item?id=44931824</a></p>\n<p>Points: 259</p>\n<p># Comments: 71</p>",
+      "summary": "<p>We just shipped a new feature in NextDNS: Bypass Age Verification.<p>More and more sites (especially adult ones) are now forcing users to upload IDs or selfies to continue. We think that’s a terrible idea: handing over government documents to random sites is a huge privacy risk.<p>This new setting workarounds those verification flows via DNS tricks. It’s available today to all users, including free accounts.<p>We’re curious how the HN community feels about this. Is it the right way to protect privacy online, or will it just provoke regulators to push harder?<p><a href=\"https://nextdns.io\" rel=\"nofollow\">https://nextdns.io</a></p>\n<hr />\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44931824\">https://news.ycombinator.com/item?id=44931824</a></p>\n<p>Points: 298</p>\n<p># Comments: 85</p>",
       "host": "news.ycombinator.com",
       "ts": 1755440962,
-      "rank_score": 0.796
+      "rank_score": 0.795
     },
     {
-      "title": "Claude AI won’t tolerate abuse anymore: Anthropic gives it the right to shut you down - Mathrubhumi English",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVV80elN2UG1CckxSYVp2ZDhEUFNKVWE3aVZkZHJfUE11R0xWSGsxLUE2cnR6S1dDNVZraEc0cGhOUmZnRlBKVnhsT2hVTGJQcTc2OUVDd0FJc1RxWXQ4RFJJNlNVbUMzNVh3eGhkaEhhcmgxa0s0LXpBYjBaZjlNY2hwa1F5XzFOM2FOZUkwY20wR3hRR0Zj0gGcAUFVX3lxTFAyQVhwdnFuU0pZNkdkMnlBbVlxZ3R2bkpRWFNaU3ZOUWM5SHRJMmJVV3diSWlvTGp1UHRLZERfWW43VW5iRU9GRjBXZ3Bvc1VBbFZHelVoQTlXY1NHVGltY1ZJalFGY01tUEFweG52THh6Z0ZFQ2UwT3h0QnUwb1JPMGFzcDlzaU1lNVFXUXJKUzhsWHJhSUx2ajRNZA?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOVV80elN2UG1CckxSYVp2ZDhEUFNKVWE3aVZkZHJfUE11R0xWSGsxLUE2cnR6S1dDNVZraEc0cGhOUmZnRlBKVnhsT2hVTGJQcTc2OUVDd0FJc1RxWXQ4RFJJNlNVbUMzNVh3eGhkaEhhcmgxa0s0LXpBYjBaZjlNY2hwa1F5XzFOM2FOZUkwY20wR3hRR0Zj0gGcAUFVX3lxTFAyQVhwdnFuU0pZNkdkMnlBbVlxZ3R2bkpRWFNaU3ZOUWM5SHRJMmJVV3diSWlvTGp1UHRLZERfWW43VW5iRU9GRjBXZ3Bvc1VBbFZHelVoQTlXY1NHVGltY1ZJalFGY01tUEFweG52THh6Z0ZFQ2UwT3h0QnUwb1JPMGFzcDlzaU1lNVFXUXJKUzhsWHJhSUx2ajRNZA?oc=5\" target=\"_blank\">Claude AI won’t tolerate abuse anymore: Anthropic gives it the right to shut you down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Mathrubhumi English</font>",
+      "title": "Are Efforts to Pre-empt State AI Regulation Actually Dead? - Governing",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLTlETVpKdkFEREdKb0RQLXJvc3hSaUc2MXdKbTlReERwOFZOdzVtRTdFNXBkckNUaTMwMzZvRkZHeFp3SG1vYzI1REw5eVRsU3h0bmJaaHVoLVl4QU0yLXNSdHllVTNrR2FxWlpxN3ZwT2haRzVKZ1FKcGp1bTVrREtEWXZEbVhsZ0ltcEJRaFV6TmtRdE9uaDhReFhWX3VVUXQ4LWVZejR1UWM?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLTlETVpKdkFEREdKb0RQLXJvc3hSaUc2MXdKbTlReERwOFZOdzVtRTdFNXBkckNUaTMwMzZvRkZHeFp3SG1vYzI1REw5eVRsU3h0bmJaaHVoLVl4QU0yLXNSdHllVTNrR2FxWlpxN3ZwT2haRzVKZ1FKcGp1bTVrREtEWXZEbVhsZ0ltcEJRaFV6TmtRdE9uaDhReFhWX3VVUXQ4LWVZejR1UWM?oc=5\" target=\"_blank\">Are Efforts to Pre-empt State AI Regulation Actually Dead?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Governing</font>",
       "host": "news.google.com",
-      "ts": 1755485726,
+      "ts": 1755490107,
       "rank_score": 0.778
     },
     {
-      "title": "1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030 - The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWRYRElCMTQ0TF90bC1WS1lNMktwUkdoVDdPVW5VQmRqd2V3b1h1SWluNUJ3R0VWelVnMV9EV0ZMQzVwR0kxNWFXZ3JnczdSeE5hMm5GRlR6dUo4UTFtZy1EUDJwRXpCdUR3VWoxNXhYQXpkM2ZweE94aHpHendVNU1OSERzdDlvUS1JS1B1QUFsaWU2T19B?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWRYRElCMTQ0TF90bC1WS1lNMktwUkdoVDdPVW5VQmRqd2V3b1h1SWluNUJ3R0VWelVnMV9EV0ZMQzVwR0kxNWFXZ3JnczdSeE5hMm5GRlR6dUo4UTFtZy1EUDJwRXpCdUR3VWoxNXhYQXpkM2ZweE94aHpHendVNU1OSERzdDlvUS1JS1B1QUFsaWU2T19B?oc=5\" target=\"_blank\">1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Motley Fool</font>",
+      "title": "IMDB Terminal Browser",
+      "url": "https://github.com/isene/IMDB",
+      "summary": "<p>Article URL: <a href=\"https://github.com/isene/IMDB\">https://github.com/isene/IMDB</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44937346\">https://news.ycombinator.com/item?id=44937346</a></p>\n<p>Points: 4</p>\n<p># Comments: 2</p>",
+      "host": "github.com",
+      "ts": 1755490436,
+      "rank_score": 0.778
+    },
+    {
+      "title": "The question suddenly sweeping through Silicon Valley - AFR",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSkl4UTBIR2dPbUNXQVRMUXBOdVJtU0hBaTR6U2NUTHVhd3gyWlNvbVdIWFJwcUd2OEl5eDZJRkZmb0NFam1Balc1NkZNTUJCcmZzcmhRTUtLWDRkWGF3LW1BNzBkRTk0cDBrd25WMll3Q0QyOFAwQWlfVDBqZy1tN0tMdVpIVXE4clJ1Z3JLenU0Yk1YZlBzWG5zTlBMN3d3c2c?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOSkl4UTBIR2dPbUNXQVRMUXBOdVJtU0hBaTR6U2NUTHVhd3gyWlNvbVdIWFJwcUd2OEl5eDZJRkZmb0NFam1Balc1NkZNTUJCcmZzcmhRTUtLWDRkWGF3LW1BNzBkRTk0cDBrd25WMll3Q0QyOFAwQWlfVDBqZy1tN0tMdVpIVXE4clJ1Z3JLenU0Yk1YZlBzWG5zTlBMN3d3c2c?oc=5\" target=\"_blank\">The question suddenly sweeping through Silicon Valley</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AFR</font>",
       "host": "news.google.com",
-      "ts": 1755480600,
+      "ts": 1755488340,
       "rank_score": 0.777
     },
     {
-      "title": "AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas - The Guardian",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5\" target=\"_blank\">AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "title": "Indians now have to pay more for ChatGPT Plus and Pro plans: Check new prices - The Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxONWJoNjQ5SXZFeWhxVXNkeVl6bHdEcTZmLUdWSnV3U3YtWFczdG4xYTdaOWlYNWRXaHBMNmJBV2Jlc3JXcVZwZWNlVzZZbGE1UDRjOVpDdU1zTWN5YUdmc3lXOGo0UGpNV3ItTkRCaVVDbjNTb2NQTURFckIxWUNDNGR3djVNemRNWWpWR2Y2RzJlVDFEeDJiMl9JR0ptYTd0NG54RGFNbHJQdTM3TXhYZU1ia3hsbV84WUlSNmREdGxaQ3ZWQjdyeGZmQml2NDhZ0gHXAUFVX3lxTE1hZlpEbUVlN3VXLWlMT0RFUVF6MjJLNjBaWW1lalhyXy02bG9YVXdreFZqRWpaakZuV3plRGVIek1tZ0JYTW0yTU9TQTdXSXBJOWpKMzFISXlhWnEzNzE3NVpSdlpieDRyR2JBQ29zdmowaVdodml1TWRQYzVxc1dKWUJIa1R4MnRyaWREX1BhNFVZbnZKaTdLY3JuVFB5WkxiZE01Wko5SFVobFlqYWVmczlMbWJId1ZVUFh4NjJfYmFWSjFmZl9rOTV4LVk5cVBLcGlSV0xJ?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxONWJoNjQ5SXZFeWhxVXNkeVl6bHdEcTZmLUdWSnV3U3YtWFczdG4xYTdaOWlYNWRXaHBMNmJBV2Jlc3JXcVZwZWNlVzZZbGE1UDRjOVpDdU1zTWN5YUdmc3lXOGo0UGpNV3ItTkRCaVVDbjNTb2NQTURFckIxWUNDNGR3djVNemRNWWpWR2Y2RzJlVDFEeDJiMl9JR0ptYTd0NG54RGFNbHJQdTM3TXhYZU1ia3hsbV84WUlSNmREdGxaQ3ZWQjdyeGZmQml2NDhZ0gHXAUFVX3lxTE1hZlpEbUVlN3VXLWlMT0RFUVF6MjJLNjBaWW1lalhyXy02bG9YVXdreFZqRWpaakZuV3plRGVIek1tZ0JYTW0yTU9TQTdXSXBJOWpKMzFISXlhWnEzNzE3NVpSdlpieDRyR2JBQ29zdmowaVdodml1TWRQYzVxc1dKWUJIa1R4MnRyaWREX1BhNFVZbnZKaTdLY3JuVFB5WkxiZE01Wko5SFVobFlqYWVmczlMbWJId1ZVUFh4NjJfYmFWSjFmZl9rOTV4LVk5cVBLcGlSV0xJ?oc=5\" target=\"_blank\">Indians now have to pay more for ChatGPT Plus and Pro plans: Check new prices</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Indian Express</font>",
       "host": "news.google.com",
-      "ts": 1755475539,
-      "rank_score": 0.777
-    },
-    {
-      "title": "How US ban fed China's AI boom - China Daily - Global Edition",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMkh2VlRNTFl4NDJ0eUdkUUtyd3VvMXlHU01qRDQ2SXBjR3JjZkdNWjR5NjBGVnlVUHN3SXRERmJDV3lEdGdpUUhla1E2SUg2M3RmZXZnU29Xc3pSQktETTlUck03bDJwdjVwU25JMDVSNXdPVGFpNXMxUTE0M1Q4X1VB?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQMkh2VlRNTFl4NDJ0eUdkUUtyd3VvMXlHU01qRDQ2SXBjR3JjZkdNWjR5NjBGVnlVUHN3SXRERmJDV3lEdGdpUUhla1E2SUg2M3RmZXZnU29Xc3pSQktETTlUck03bDJwdjVwU25JMDVSNXdPVGFpNXMxUTE0M1Q4X1VB?oc=5\" target=\"_blank\">How US ban fed China's AI boom</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
-      "host": "news.google.com",
-      "ts": 1755479949,
-      "rank_score": 0.777
-    },
-    {
-      "title": "A Macao-Shanghai AI medical research centre has been launched - Macao News",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5\" target=\"_blank\">A Macao-Shanghai AI medical research centre has been launched</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Macao News</font>",
-      "host": "news.google.com",
-      "ts": 1755479492,
-      "rank_score": 0.777
-    },
-    {
-      "title": "Artificial intelligence (AI) start-up Waddle announced on the 18th that it has signed a contract wit.. - 매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5wendfY2U3NzhKRzZYajNYajFlaWtSRmJNRmpIeFlkQTFDSWpqZm9iZlU5RF9USHN1a2NBSUVIR1loUFZNVG10WVhDMA?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE5wendfY2U3NzhKRzZYajNYajFlaWtSRmJNRmpIeFlkQTFDSWpqZm9iZlU5RF9USHN1a2NBSUVIR1loUFZNVG10WVhDMA?oc=5\" target=\"_blank\">Artificial intelligence (AI) start-up Waddle announced on the 18th that it has signed a contract wit..</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매일경제</font>",
-      "host": "news.google.com",
-      "ts": 1755483180,
+      "ts": 1755487560,
       "rank_score": 0.777
     },
     {
@@ -78,7 +62,23 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5\" target=\"_blank\">Should you delete your ChatGPT history? Why you might not have a choice.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">USA Today</font>",
       "host": "news.google.com",
-      "ts": 1755480747,
+      "ts": 1755486147,
+      "rank_score": 0.777
+    },
+    {
+      "title": "Claude AI won’t tolerate abuse anymore: Anthropic gives it the right to shut you down - Mathrubhumi English",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVV80elN2UG1CckxSYVp2ZDhEUFNKVWE3aVZkZHJfUE11R0xWSGsxLUE2cnR6S1dDNVZraEc0cGhOUmZnRlBKVnhsT2hVTGJQcTc2OUVDd0FJc1RxWXQ4RFJJNlNVbUMzNVh3eGhkaEhhcmgxa0s0LXpBYjBaZjlNY2hwa1F5XzFOM2FOZUkwY20wR3hRR0Zj0gGcAUFVX3lxTFAyQVhwdnFuU0pZNkdkMnlBbVlxZ3R2bkpRWFNaU3ZOUWM5SHRJMmJVV3diSWlvTGp1UHRLZERfWW43VW5iRU9GRjBXZ3Bvc1VBbFZHelVoQTlXY1NHVGltY1ZJalFGY01tUEFweG52THh6Z0ZFQ2UwT3h0QnUwb1JPMGFzcDlzaU1lNVFXUXJKUzhsWHJhSUx2ajRNZA?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOVV80elN2UG1CckxSYVp2ZDhEUFNKVWE3aVZkZHJfUE11R0xWSGsxLUE2cnR6S1dDNVZraEc0cGhOUmZnRlBKVnhsT2hVTGJQcTc2OUVDd0FJc1RxWXQ4RFJJNlNVbUMzNVh3eGhkaEhhcmgxa0s0LXpBYjBaZjlNY2hwa1F5XzFOM2FOZUkwY20wR3hRR0Zj0gGcAUFVX3lxTFAyQVhwdnFuU0pZNkdkMnlBbVlxZ3R2bkpRWFNaU3ZOUWM5SHRJMmJVV3diSWlvTGp1UHRLZERfWW43VW5iRU9GRjBXZ3Bvc1VBbFZHelVoQTlXY1NHVGltY1ZJalFGY01tUEFweG52THh6Z0ZFQ2UwT3h0QnUwb1JPMGFzcDlzaU1lNVFXUXJKUzhsWHJhSUx2ajRNZA?oc=5\" target=\"_blank\">Claude AI won’t tolerate abuse anymore: Anthropic gives it the right to shut you down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Mathrubhumi English</font>",
+      "host": "news.google.com",
+      "ts": 1755485726,
+      "rank_score": 0.777
+    },
+    {
+      "title": "Google admits anti-competitive conduct involving Google Search in Australia",
+      "url": "https://www.accc.gov.au/media-release/google-admits-anti-competitive-conduct-involving-google-search-in-australia",
+      "summary": "<p>Article URL: <a href=\"https://www.accc.gov.au/media-release/google-admits-anti-competitive-conduct-involving-google-search-in-australia\">https://www.accc.gov.au/media-release/google-admits-anti-competitive-conduct-involving-google-search-in-australia</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44936945\">https://news.ycombinator.com/item?id=44936945</a></p>\n<p>Points: 67</p>\n<p># Comments: 28</p>",
+      "host": "accc.gov.au",
+      "ts": 1755485695,
       "rank_score": 0.777
     }
   ]

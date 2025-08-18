@@ -14,6 +14,7 @@ PLATFORM_KEYS = {
   "Cohere":["cohere"],
   "Stability":["stability","stable diffusion","stability ai"],
   "Baidu":["baidu","wenxin","ernie"],
+  "Grok":["x.ai","xai","grok","x.com"]
 }
 
 def detect_platform(title,url):
@@ -68,6 +69,16 @@ def run(write_to="data/platform_rankings.json", snapshots_path="data/snapshots_p
 
     if not rows:
         write_json(write_to, {"generated_at": now_iso(), "items":[]}); return {"items":[]}
+
+    # 0~100 정규화
+
+    # === Fallback: 최소 10개 보장 ===
+    if len(rows) < 10:
+        want = list(PLATFORM_KEYS.keys())[:10]
+        have = {r["name"] for r in rows}
+        for nm in want:
+            if nm in have: continue
+            rows.append({"name": nm, "users": 0.0, "traffic": 0.0, "growth": 0.0, "sources": []})
 
     # 0~100 정규화
     users_scaled = minmax([r["users"] for r in rows])
