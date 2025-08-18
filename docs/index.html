@@ -29,6 +29,7 @@
     .change svg { width:16px; height:16px; }
     .change.up{color:#16a34a}.change.down{color:#dc2626}.change.flat{color:#6b7280}
     .trend.down { transform: scaleY(-1); }
+    .item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--bd);}
   </style>
 </head>
 <body>
@@ -85,10 +86,5 @@
   </div>
 
   <!-- 중요: defer 로드 -->
-  <script src="app.js?v=mvp2"></script>
-  <div id="platforms"></div>
-  <div id="repos"></div>
-  <div id="news"></div>
-  <div id="note"></div>
-</body>
+  <script src="app.js?v=mvp4" defer></script></body>
 </html>
