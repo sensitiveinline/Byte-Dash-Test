@@ -85,10 +85,6 @@
   </div>
 
   <!-- 중요: defer 로드 -->
-  <script src="app.js?v=mvp2"></script>
-  <div id="platforms"></div>
-  <div id="repos"></div>
-  <div id="news"></div>
-  <div id="note"></div>
+  <script src="app.js?v=mvp"></script>
 </body>
 </html>

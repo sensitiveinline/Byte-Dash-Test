@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-17T15:43:49.807822+00:00",
+  "generated_at": "2025-08-18T01:28:16.687514+00:00",
   "items": [
     {
       "repo": "joshmoody24/make-github-great-again",
@@ -9,14 +9,14 @@
       "new_stars30": 0,
       "commits30": 10,
       "contributors": 1,
-      "release_recency": 88.0,
-      "score": 11.5
+      "release_recency": 87.0,
+      "score": 11.4
     },
     {
       "repo": "bahdotsh/wrkflw",
       "url": "https://github.com/bahdotsh/wrkflw",
       "description": "",
-      "stars": 1513,
+      "stars": 1518,
       "new_stars30": 0,
       "commits30": 45,
       "contributors": 4,
@@ -27,7 +27,7 @@
       "repo": "coleam00/Archon",
       "url": "https://github.com/coleam00/Archon",
       "description": "",
-      "stars": 7205,
+      "stars": 7651,
       "new_stars30": 0,
       "commits30": 19,
       "contributors": 11,
@@ -38,18 +38,18 @@
       "repo": "emcie-co/parlant",
       "url": "https://github.com/emcie-co/parlant",
       "description": "",
-      "stars": 4515,
+      "stars": 4889,
       "new_stars30": 0,
       "commits30": 200,
       "contributors": 15,
-      "release_recency": 90.0,
-      "score": 62.0
+      "release_recency": 89.0,
+      "score": 61.9
     },
     {
       "repo": "Shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "description": "",
-      "stars": 58604,
+      "stars": 58797,
       "new_stars30": 0,
       "commits30": 27,
       "contributors": 46,
@@ -60,7 +60,7 @@
       "repo": "tsoding/nob.h",
       "url": "https://github.com/tsoding/nob.h",
       "description": "",
-      "stars": 1561,
+      "stars": 1600,
       "new_stars30": 0,
       "commits30": 12,
       "contributors": 21,
@@ -71,7 +71,7 @@
       "repo": "aliasrobotics/cai",
       "url": "https://github.com/aliasrobotics/cai",
       "description": "",
-      "stars": 2530,
+      "stars": 2667,
       "new_stars30": 0,
       "commits30": 21,
       "contributors": 73,
@@ -82,7 +82,7 @@
       "repo": "PixiEditor/PixiEditor",
       "url": "https://github.com/PixiEditor/PixiEditor",
       "description": "",
-      "stars": 3859,
+      "stars": 4032,
       "new_stars30": 0,
       "commits30": 114,
       "contributors": 27,

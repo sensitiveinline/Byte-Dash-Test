@@ -105,7 +105,7 @@ async function renderNote(){
   if(!arr.length){ el.innerHTML = '<div class="empty">데이터 없음</div>'; return; }
   arr.forEach(x=>{
     const row = document.createElement('div'); row.className='item';
-    row.innerHTML = `<div class="insight" style="white-space:pre-line">${esc(x.text||'')}</div>`;
+    row.innerHTML = `<div class="insight" style="white-space:pre-line">${esc(x.text||x.content||x.note||'')}</div>`;
     el.appendChild(row);
   });
 }

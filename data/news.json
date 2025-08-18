@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-17T15:43:29.581673+00:00",
+  "generated_at": "2025-08-18T01:27:54.672807+00:00",
   "items": [
     {
       "title": "Teaching the model: Designing LLM feedback loops that get smarter over time",
@@ -7,79 +7,79 @@
       "summary": "How to close the loop between user behavior and LLM performance, and why human-in-the-loop systems are still essential in the age of gen AI.",
       "host": "venturebeat.com",
       "ts": 1755375300,
-      "rank_score": 0.814
+      "rank_score": 0.801
     },
     {
-      "title": "The Download: Taiwan’s silicon shield, and ChatGPT’s personality misstep",
-      "url": "https://www.technologyreview.com/2025/08/15/1121920/the-download-taiwans-silicon-shield-and-chatgpts-personality-misstep/",
-      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Taiwan’s “silicon shield” could be weakening Taiwanese politics increasingly revolves around one crucial question: Will China invade? China’s ruling party has wanted to seize Taiwan for more than half a century. But in&#8230;",
-      "host": "technologyreview.com",
-      "ts": 1755259800,
-      "rank_score": 0.788
-    },
-    {
-      "title": "Decoding Palantir, the Most Mysterious Company in Silicon Valley",
-      "url": "https://www.wired.com/story/uncanny-valley-podcast-palantir-most-mysterious-company-silicon-valley/",
-      "summary": "This week on Uncanny Valley, we talk about one of the most notorious American corporations. So what does Palantir actually do?",
-      "host": "wired.com",
-      "ts": 1755283573,
-      "rank_score": 0.787
-    },
-    {
-      "title": "Developers Say GPT-5 Is a Mixed Bag",
-      "url": "https://www.wired.com/story/gpt-5-coding-review-software-engineering/",
-      "summary": "Software engineers are finding that OpenAI’s new GPT-5 model is helping them think through coding problems—but isn’t much better at actual coding.",
-      "host": "wired.com",
-      "ts": 1755280069,
-      "rank_score": 0.784
-    },
-    {
-      "title": "Why GPT-4o’s sudden shutdown left people grieving",
-      "url": "https://www.technologyreview.com/2025/08/15/1121900/gpt4o-grief-ai-companion/",
-      "summary": "June had no idea that GPT-5 was coming. The Norwegian student was enjoying a late-night writing session last Thursday when her ChatGPT collaborator started acting strange. “It started forgetting everything, and it wrote really badly,” she says. “It was like a robot.” June, who asked that we use only her first name for privacy reasons,&#8230;",
-      "host": "technologyreview.com",
-      "ts": 1755254063,
-      "rank_score": 0.781
-    },
-    {
-      "title": "Indigenous knowledge meets artificial intelligence",
-      "url": "https://www.technologyreview.com/2025/08/15/1121342/native-american-art-technology-ai/",
-      "summary": "There is no word for art in most Native American languages. Instead, the closest terms speak not to objecthood but to action and intention. In Lakota, “wówačhiŋtȟaŋka” implies deep thought or reflection, while “wóčhekiye” suggests offering or prayer. Art is not separate from life; it is ceremony, instruction, design. Like architecture or code, it carries&#8230;",
-      "host": "technologyreview.com",
-      "ts": 1755252000,
-      "rank_score": 0.779
-    },
-    {
-      "title": "Prediction: 2 Artificial Intelligence (AI) Stocks That Will Be Worth More Than Nvidia by 2030 - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMzNEYmRFbUFwV2N1Zk5nSVNOQTlYVUhaQmVnRFRVVjhnOFRxdWNSeUFLRDk1emtHUXZ0d3E5RFVTZW5OeEowZk54eDd4S0xkUHZlNDFQRWNJQmdadVZ5U1FOZWlVSnFyWlc5RUs4UFY0SGRGa09DelBURUxfVVhuSzFPWlFyc0VGdHlQZER3?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPMzNEYmRFbUFwV2N1Zk5nSVNOQTlYVUhaQmVnRFRVVjhnOFRxdWNSeUFLRDk1emtHUXZ0d3E5RFVTZW5OeEowZk54eDd4S0xkUHZlNDFQRWNJQmdadVZ5U1FOZWlVSnFyWlc5RUs4UFY0SGRGa09DelBURUxfVVhuSzFPWlFyc0VGdHlQZER3?oc=5\" target=\"_blank\">Prediction: 2 Artificial Intelligence (AI) Stocks That Will Be Worth More Than Nvidia by 2030</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "title": "Space station crew gains AI assistant - China Daily - Global Edition",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcTFZTUw0MURWb3JRQUtyd0h2cngxTnJvQ3RrS1Itakd0bFJuVVM4clFiVGFwaEF4U2FTYWlQY3dZQ3k4MS00OVoxbVRPczNoNkNKVFh4bzVOV2NtN1Jwam9XTVpockRNT1VvWV8taW94TnpRZGlFeS1wT3JIUVRxb0dB?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOcTFZTUw0MURWb3JRQUtyd0h2cngxTnJvQ3RrS1Itakd0bFJuVVM4clFiVGFwaEF4U2FTYWlQY3dZQ3k4MS00OVoxbVRPczNoNkNKVFh4bzVOV2NtN1Jwam9XTVpockRNT1VvWV8taW94TnpRZGlFeS1wT3JIUVRxb0dB?oc=5\" target=\"_blank\">Space station crew gains AI assistant</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
       "host": "news.google.com",
-      "ts": 1755443100,
+      "ts": 1755479360,
       "rank_score": 0.778
     },
     {
-      "title": "Evaluation using artificial intelligence shows post pandemic differences in oral reading fluency between Brazilian public and private school students - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5Qc05Vekszb0g5ZTVDTFliQmxlWXZIRmVxMG5RSkpkM3l0ZUJ6ck5MYlREamdUZEJRMkZPU1M2ZnhBcEk1RjNCcklvTVNIaFZWWlNna3R6dlJkYW5xSUZ3?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE5Qc05Vekszb0g5ZTVDTFliQmxlWXZIRmVxMG5RSkpkM3l0ZUJ6ck5MYlREamdUZEJRMkZPU1M2ZnhBcEk1RjNCcklvTVNIaFZWWlNna3R6dlJkYW5xSUZ3?oc=5\" target=\"_blank\">Evaluation using artificial intelligence shows post pandemic differences in oral reading fluency between Brazilian public and private school students</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nature</font>",
+      "title": "A Macao-Shanghai AI medical research centre has been launched - Macao News",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5\" target=\"_blank\">A Macao-Shanghai AI medical research centre has been launched</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Macao News</font>",
       "host": "news.google.com",
-      "ts": 1755442937,
+      "ts": 1755479492,
       "rank_score": 0.778
     },
     {
-      "title": "The new ChatGPT has some AI fans rethinking when to expect ‘superintelligence’ - The Washington Post",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQdFRXd1dhRU94VVNiNW9qaE5NV2lrSTBYbXFmTGd3WTUwNnVCSjFlM2lQSk9mcEUtS210YzVGejA3NUo5V3VvT0h2TnJFN285YzdIRk9NdW1Pc3IyQjRTU3UzeThnX1pHQUhvQk1tQ21QSnVvbDJIdHRwN05pQTJaV3U4R1llZDU0TFpmanRONUEtVDVXMFE?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQdFRXd1dhRU94VVNiNW9qaE5NV2lrSTBYbXFmTGd3WTUwNnVCSjFlM2lQSk9mcEUtS210YzVGejA3NUo5V3VvT0h2TnJFN285YzdIRk9NdW1Pc3IyQjRTU3UzeThnX1pHQUhvQk1tQ21QSnVvbDJIdHRwN05pQTJaV3U4R1llZDU0TFpmanRONUEtVDVXMFE?oc=5\" target=\"_blank\">The new ChatGPT has some AI fans rethinking when to expect ‘superintelligence’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "title": "AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5\" target=\"_blank\">AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
       "host": "news.google.com",
-      "ts": 1755443240,
-      "rank_score": 0.778
+      "ts": 1755475539,
+      "rank_score": 0.777
     },
     {
       "title": "Should you delete your ChatGPT history? Why you might not have a choice. - USA Today",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5\" target=\"_blank\">Should you delete your ChatGPT history? Why you might not have a choice.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">USA Today</font>",
       "host": "news.google.com",
-      "ts": 1755442947,
-      "rank_score": 0.778
+      "ts": 1755475347,
+      "rank_score": 0.777
+    },
+    {
+      "title": "Oracle Expands AI Partnership with Google Cloud with Gemini Models to Oracle Cloud Infra - The Fast Mode",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVXNWMjA1OGFUX2RGWnlweFl5VWpUQ2VnSW90ZWZqeEFhcUw0aUllQW1IcXN1ekwwYV84NVBkMHFMcGhhRjl4QUtnaUNmX2gwZG5SSC1HdERleEE1NFFfVjEzY09RV2tKbm5uVl9JdnBReWFWWTN0SjJ2bG5qbllUTFJQeWk3NUd3Vy1vcXRUX0lvZVk5cnFwa3I2S2VXVXlUY00wNUpDLTZuSTJDRWxDR3ZvNnMtM0pFUTJWMV80ZGNEaVZhZ3VxX0JNTzVWa3JjMHNIbXNKYmtZN1U?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVXNWMjA1OGFUX2RGWnlweFl5VWpUQ2VnSW90ZWZqeEFhcUw0aUllQW1IcXN1ekwwYV84NVBkMHFMcGhhRjl4QUtnaUNmX2gwZG5SSC1HdERleEE1NFFfVjEzY09RV2tKbm5uVl9JdnBReWFWWTN0SjJ2bG5qbllUTFJQeWk3NUd3Vy1vcXRUX0lvZVk5cnFwa3I2S2VXVXlUY00wNUpDLTZuSTJDRWxDR3ZvNnMtM0pFUTJWMV80ZGNEaVZhZ3VxX0JNTzVWa3JjMHNIbXNKYmtZN1U?oc=5\" target=\"_blank\">Oracle Expands AI Partnership with Google Cloud with Gemini Models to Oracle Cloud Infra</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Fast Mode</font>",
+      "host": "news.google.com",
+      "ts": 1755476515,
+      "rank_score": 0.777
+    },
+    {
+      "title": "Anthropic gives Claude AI power to end conversations as part of 'model welfare' push - MSN",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5\" target=\"_blank\">Anthropic gives Claude AI power to end conversations as part of 'model welfare' push</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "host": "news.google.com",
+      "ts": 1755474181,
+      "rank_score": 0.777
+    },
+    {
+      "title": "I Asked ChatGPT How To Turn $10 Into $1 Million: Here’s What It Said - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1QOUVNMFpnOFJGVUdyaTJyMWc2cXVRcElPeGhQYWV2cDREZFJEaFBXZXhjUjZfdF93NENoa1Brb1lQUDVvQVBBSldBTzN1ZXBBUWhMOXFUWTB0ZzZGb3pfcFZHaGxwVXBpZjVVdjFfaDQtRGZ2MmRuQg?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE1QOUVNMFpnOFJGVUdyaTJyMWc2cXVRcElPeGhQYWV2cDREZFJEaFBXZXhjUjZfdF93NENoa1Brb1lQUDVvQVBBSldBTzN1ZXBBUWhMOXFUWTB0ZzZGb3pfcFZHaGxwVXBpZjVVdjFfaDQtRGZ2MmRuQg?oc=5\" target=\"_blank\">I Asked ChatGPT How To Turn $10 Into $1 Million: Here’s What It Said</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "host": "news.google.com",
+      "ts": 1755468077,
+      "rank_score": 0.776
+    },
+    {
+      "title": "Is Artificial Intelligence Impossible? Aristotle & Aquinas on AI - TheCollector",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbEdmbldBS0lXeVdFTThYa05uMlE3T3ZQTmRFSlMwcmR3WEozMzg4ME9YYmxldDBZYTZlWGJGdlBKZ1AxMDY0a25ucVJ4LXBMX19UQnlxYllOenRNTzZUTlFtUVAxSDlMckE3cFVPdEU4NnhMNXpQcW1DNTZmWjFuWU5xYjN1UXpVSHc?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQbEdmbldBS0lXeVdFTThYa05uMlE3T3ZQTmRFSlMwcmR3WEozMzg4ME9YYmxldDBZYTZlWGJGdlBKZ1AxMDY0a25ucVJ4LXBMX19UQnlxYllOenRNTzZUTlFtUVAxSDlMckE3cFVPdEU4NnhMNXpQcW1DNTZmWjFuWU5xYjN1UXpVSHc?oc=5\" target=\"_blank\">Is Artificial Intelligence Impossible? Aristotle & Aquinas on AI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TheCollector</font>",
+      "host": "news.google.com",
+      "ts": 1755461725,
+      "rank_score": 0.775
+    },
+    {
+      "title": "If AI takes most of our jobs, money as we know it will be over. What then? - The Conversation",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWG42MUxBNlUyLWw1Q0FPVHlad3MyRGtvUUgtbWlmUjNMWElsN2hRUmJtVlZVNmN3WnIxUTU0N1JSMzRkZDJYM0d1TUYwQVdIQ1M3cVhmRlE0aUVKckZGZXczWWdBYUJRbXFheUNkb002alNOM05pTG9GU3hkS192Nk5XX3l4WlBHeHdYNkxHR3k5T2xFSXBoV1RScEpkS1J6U2kwOGxLX2kwQQ?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWG42MUxBNlUyLWw1Q0FPVHlad3MyRGtvUUgtbWlmUjNMWElsN2hRUmJtVlZVNmN3WnIxUTU0N1JSMzRkZDJYM0d1TUYwQVdIQ1M3cVhmRlE0aUVKckZGZXczWWdBYUJRbXFheUNkb002alNOM05pTG9GU3hkS192Nk5XX3l4WlBHeHdYNkxHR3k5T2xFSXBoV1RScEpkS1J6U2kwOGxLX2kwQQ?oc=5\" target=\"_blank\">If AI takes most of our jobs, money as we know it will be over. What then?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conversation</font>",
+      "host": "news.google.com",
+      "ts": 1755457426,
+      "rank_score": 0.775
     }
   ]
 }
