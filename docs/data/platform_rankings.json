@@ -1,6 +1,29 @@
 {
-  "generated_at": "2025-08-18T04:38:11.804502+00:00",
+  "generated_at": "2025-08-17T13:55:48.385722+00:00",
   "items": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "score": 50.0,
+      "metrics": {
+        "users": 0.0,
+        "traffic": 0.0,
+        "growth": 0.0
+      },
+      "sources": [
+        {
+          "type": "news",
+          "url": "https://www.technologyreview.com/2025/08/15/1121920/the-download-taiwans-silicon-shield-and-chatgpts-personality-misstep/"
+        },
+        {
+          "type": "official",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5"
+        }
+      ],
+      "rank": 1,
+      "delta7": 0.0,
+      "delta30": 0.0
+    },
     {
       "id": "gemini",
       "name": "Gemini",
@@ -13,157 +36,10 @@
       "sources": [
         {
           "type": "official",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLTlETVpKdkFEREdKb0RQLXJvc3hSaUc2MXdKbTlReERwOFZOdzVtRTdFNXBkckNUaTMwMzZvRkZHeFp3SG1vYzI1REw5eVRsU3h0bmJaaHVoLVl4QU0yLXNSdHllVTNrR2FxWlpxN3ZwT2haRzVKZ1FKcGp1bTVrREtEWXZEbVhsZ0ltcEJRaFV6TmtRdE9uaDhReFhWX3VVUXQ4LWVZejR1UWM?oc=5"
-        },
-        {
-          "type": "official",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSkl4UTBIR2dPbUNXQVRMUXBOdVJtU0hBaTR6U2NUTHVhd3gyWlNvbVdIWFJwcUd2OEl5eDZJRkZmb0NFam1Balc1NkZNTUJCcmZzcmhRTUtLWDRkWGF3LW1BNzBkRTk0cDBrd25WMll3Q0QyOFAwQWlfVDBqZy1tN0tMdVpIVXE4clJ1Z3JLenU0Yk1YZlBzWG5zTlBMN3d3c2c?oc=5"
-        },
-        {
-          "type": "official",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVV80elN2UG1CckxSYVp2ZDhEUFNKVWE3aVZkZHJfUE11R0xWSGsxLUE2cnR6S1dDNVZraEc0cGhOUmZnRlBKVnhsT2hVTGJQcTc2OUVDd0FJc1RxWXQ4RFJJNlNVbUMzNVh3eGhkaEhhcmgxa0s0LXpBYjBaZjlNY2hwa1F5XzFOM2FOZUkwY20wR3hRR0Zj0gGcAUFVX3lxTFAyQVhwdnFuU0pZNkdkMnlBbVlxZ3R2bkpRWFNaU3ZOUWM5SHRJMmJVV3diSWlvTGp1UHRLZERfWW43VW5iRU9GRjBXZ3Bvc1VBbFZHelVoQTlXY1NHVGltY1ZJalFGY01tUEFweG52THh6Z0ZFQ2UwT3h0QnUwb1JPMGFzcDlzaU1lNVFXUXJKUzhsWHJhSUx2ajRNZA?oc=5"
-        },
-        {
-          "type": "official",
-          "url": "https://www.accc.gov.au/media-release/google-admits-anti-competitive-conduct-involving-google-search-in-australia"
-        }
-      ],
-      "rank": 1,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "chatgpt",
-      "name": "ChatGPT",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [
-        {
-          "type": "official",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxONWJoNjQ5SXZFeWhxVXNkeVl6bHdEcTZmLUdWSnV3U3YtWFczdG4xYTdaOWlYNWRXaHBMNmJBV2Jlc3JXcVZwZWNlVzZZbGE1UDRjOVpDdU1zTWN5YUdmc3lXOGo0UGpNV3ItTkRCaVVDbjNTb2NQTURFckIxWUNDNGR3djVNemRNWWpWR2Y2RzJlVDFEeDJiMl9JR0ptYTd0NG54RGFNbHJQdTM3TXhYZU1ia3hsbV84WUlSNmREdGxaQ3ZWQjdyeGZmQml2NDhZ0gHXAUFVX3lxTE1hZlpEbUVlN3VXLWlMT0RFUVF6MjJLNjBaWW1lalhyXy02bG9YVXdreFZqRWpaakZuV3plRGVIek1tZ0JYTW0yTU9TQTdXSXBJOWpKMzFISXlhWnEzNzE3NVpSdlpieDRyR2JBQ29zdmowaVdodml1TWRQYzVxc1dKWUJIa1R4MnRyaWREX1BhNFVZbnZKaTdLY3JuVFB5WkxiZE01Wko5SFVobFlqYWVmczlMbWJId1ZVUFh4NjJfYmFWSjFmZl9rOTV4LVk5cVBLcGlSV0xJ?oc=5"
-        },
-        {
-          "type": "official",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZXY2T3U4VEpCQkJZZGFobWExS1dSTGd4R0NDWTEtVnJyVGl6WFljbVcydGJkd1Y1TG40VUVUMTBsRWdHaGtXLVJhb3NoSnFERlhhM1Z5bkc0UmVubGh1VFRvTkNPZFdsZFdPemFNTUFpUmVxLUNVdWJ3dzlJcEJmRVpvMUVkeDdxRkF6bHJEZ0Jkdnp1cXRJazRZLUg3Q3JGMkRn?oc=5"
         }
       ],
       "rank": 2,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "claude",
-      "name": "Claude",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 3,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "llama",
-      "name": "Llama",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 4,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "mistral",
-      "name": "Mistral",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 5,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "perplexity",
-      "name": "Perplexity",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 6,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "cohere",
-      "name": "Cohere",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 7,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "stability",
-      "name": "Stability",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 8,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "baidu",
-      "name": "Baidu",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 9,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
-    {
-      "id": "grok",
-      "name": "Grok",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [],
-      "rank": 10,
       "delta7": 0.0,
       "delta30": 0.0
     }
