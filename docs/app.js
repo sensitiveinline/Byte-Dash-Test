@@ -10,11 +10,31 @@ async function loadJson(path){
     return Array.isArray(j) ? j : (j.items || []);
   }catch(e){ console.error('load fail:', path, e); return []; }
 }
-function pick(...sels){ for(const s of sels){const n=document.querySelector(s); if(n) return n;}
+function pick(...sels){ for(const s of sels){const n=document.querySelector(s); if(n) return n;} return null; }
 
-// subset 표시(초기 5, 더보기로 10)
-function showSubset(container, selector, max){ let i=0; container.querySelectorAll(selector).forEach(el=>{ el.style.display = (i<max)? '' : 'none'; i++; }); }
- return null; }
+// subset 표시(처음 n개만 보여줌)
+function showSubset(container, selector, n){
+  let i=0;
+  container.querySelectorAll(selector).forEach(el=>{
+    el.style.display = (i<n) ? '' : 'none';
+    i++;
+  });
+}
+// 더보기/접기 버튼 연결
+function setupMore(container, selector, btnId, init=5, max=10){
+  const btn = document.getElementById(btnId);
+  if(!btn || !container) return;
+  const apply = (expanded)=>{
+    showSubset(container, selector, expanded ? max : init);
+    btn.textContent = expanded ? '접기' : '더보기';
+  };
+  btn.onclick = ()=>{
+    const hidden = [...container.querySelectorAll(selector)]
+      .slice(init).some(el => el.style.display === 'none');
+    apply(hidden); // hidden이면 펼치기, 아니면 접기
+  };
+  apply(false); // 초기 상태: 접힘(5개만)
+}
 
 // ---------- render: Platforms ----------
 async function renderPlatforms(){
@@ -36,6 +56,7 @@ async function renderPlatforms(){
       <div class="change ${arrow}">${d7.toFixed(1)}</div>`;
     list.appendChild(li);
   });
+  setupMore(list, '.rank-item', 'morePlat', 5, 10);
 }
 
 // ---------- render: GitHub ----------
@@ -70,6 +91,7 @@ async function renderRepos(){
         <div class="mut">score ${score}</div>`;
       el.appendChild(row);
     });
+    setupMore(el, '.item', 'moreRepo', 5, 10); // 정렬 바꿀 때마다 갱신
   };
   sel && sel.addEventListener('change', apply);
   apply();
@@ -99,6 +121,7 @@ async function renderNews(){
       <div class="mut">${host}</div>`;
     el.appendChild(row);
   });
+  setupMore(el, '.item', 'moreNews', 5, 10);
 }
 
 // ---------- render: Note ----------
@@ -113,12 +136,13 @@ async function renderNote(){
   if(!arr.length){ el.innerHTML = '<div class="mut">데이터 없음</div>'; return; }
   const first = arr[0]||{};
   if(dateEl && (first.date||first.created_at)) dateEl.textContent = (first.date||first.created_at);
-  arr.forEach(x=>{
+  arr.slice(0,10).forEach(x=>{
     const body = x.text || x.content || x.note || '';
     const row = document.createElement('div'); row.className='item';
     row.innerHTML = `<div class="insight" style="white-space:pre-line">${esc(body)}</div>`;
     el.appendChild(row);
   });
+  setupMore(el, '.item', 'moreNote', 5, 10);
 }
 
 // ---------- boot ----------
@@ -126,5 +150,3 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   await Promise.all([renderPlatforms(), renderRepos(), renderNews(), renderNote()]);
   document.querySelector('#refresh')?.addEventListener('click', ()=>location.reload());
 });
-// 보강: load 시에도 한 번 더
-window.addEventListener('load', ()=>{ renderNews(); renderNote(); });
