@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-18T02:47:36.259155+00:00",
+  "generated_at": "2025-08-18T02:51:17.190215+00:00",
   "items": [
     {
       "repo": "joshmoody24/make-github-great-again",
@@ -16,7 +16,7 @@
       "repo": "bahdotsh/wrkflw",
       "url": "https://github.com/bahdotsh/wrkflw",
       "description": "",
-      "stars": 1521,
+      "stars": 1522,
       "new_stars30": 0,
       "commits30": 45,
       "contributors": 4,
@@ -27,7 +27,7 @@
       "repo": "coleam00/Archon",
       "url": "https://github.com/coleam00/Archon",
       "description": "",
-      "stars": 7746,
+      "stars": 7749,
       "new_stars30": 0,
       "commits30": 19,
       "contributors": 11,
@@ -38,7 +38,7 @@
       "repo": "emcie-co/parlant",
       "url": "https://github.com/emcie-co/parlant",
       "description": "",
-      "stars": 4956,
+      "stars": 4959,
       "new_stars30": 0,
       "commits30": 200,
       "contributors": 15,
@@ -49,12 +49,12 @@
       "repo": "Shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "description": "",
-      "stars": 58894,
+      "stars": 58896,
       "new_stars30": 0,
       "commits30": 33,
-      "contributors": 47,
+      "contributors": 46,
       "release_recency": 90.0,
-      "score": 26.6
+      "score": 26.5
     },
     {
       "repo": "tsoding/nob.h",
@@ -82,7 +82,7 @@
       "repo": "PixiEditor/PixiEditor",
       "url": "https://github.com/PixiEditor/PixiEditor",
       "description": "",
-      "stars": 4079,
+      "stars": 4080,
       "new_stars30": 0,
       "commits30": 114,
       "contributors": 27,
