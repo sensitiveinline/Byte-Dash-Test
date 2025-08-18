@@ -1,33 +1,28 @@
-import os, json, requests
-from google import genai
-from scripts.utils import text_from_html
+import os
+from typing import Dict, Any
 
-def fetch(url, timeout=15):
-    r = requests.get(url, timeout=timeout, headers={"User-Agent":"BYTE-DASH/1.0"})
-    r.raise_for_status(); return r.text
+try:
+    # google-genai가 설치되어 있지 않아도 동작하도록 선택적 임포트
+    from google import genai  # type: ignore
+except Exception:  # pragma: no cover
+    genai = None  # 라이브러리 미존재 시에도 파이프라인이 진행되도록
 
-def ai_extract_metrics_from_page(url, fields=("users","traffic","growth","period")):
+_EMPTY = {"users": None, "traffic": None, "growth": None}
+
+def ai_extract_metrics_from_page(url: str) -> Dict[str, Any]:
     """
-    페이지에서 '사용자규모/트래픽/성장률(%)' 등 정량을 추출(가능한 경우)하고,
-    출처/단위/기간을 함께 리턴. 실패 시 None 필드.
+    주어진 URL에서 사용자수/트래픽/성장률 같은 지표를 추출.
+    - GOOGLE_API_KEY 없거나, 라이브러리/호출 실패 시: 빈 지표 반환(_EMPTY)
+    - 키가 있어도 현재는 보수적으로 빈 지표를 반환(추후 실제 파싱 로직 연결)
     """
-    html = fetch(url)
-    text = text_from_html(html)[:30000]  # 토큰 보호
-    client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-    prompt = f"""
-아래 본문에서 다음 항목을 JSON으로 추출하라(없으면 null):
-- users: 사용자 수/MAU/DAU 등 숫자와 단위(예: 1.8B monthly)
-- traffic: 웹 트래픽/방문수(예: 200M visits/month)
-- growth: 성장률 % (예: +24% YoY, +8% MoM)
-- period: 기간 텍스트(예: 2025 Q2, last month)
-- citation: 본문에서 해당 수치가 있는 문장(20~40자)
-답변은 JSON만 반환.
-본문:
-{text}
-"""
+    api_key = os.getenv("GOOGLE_API_KEY")
+    if not api_key or genai is None:
+        return dict(_EMPTY)
+
     try:
-        res = client.models.generate_content(model=os.getenv("GEMINI_MODEL","gemini-2.5-flash"), contents=prompt)
-        j = json.loads(res.text)
-        return {"url":url, **{k:j.get(k) for k in ["users","traffic","growth","period"]}, "citation": j.get("citation")}
+        # 필요 시 여기에 실제 추출 로직을 연결하세요.
+        # client = genai.Client(api_key=api_key)
+        # ... 모델 호출/크롤링/파싱 ...
+        return dict(_EMPTY)
     except Exception:
-        return {"url":url, "users":None,"traffic":None,"growth":None,"period":None,"citation":None}
+        return dict(_EMPTY)
