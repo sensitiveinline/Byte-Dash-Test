@@ -78,10 +78,10 @@ async function renderRepos(){
 }
 
 // ---------- render: News (to #newsListList) ----------
-async function renderNews(){
+async function renderNews(){ console.info('renderNews start');
   const el = document.querySelector('#newsListList');    // NEW
   if(!el) return;
-  const items = await loadJson('data/news.json'); console.info('news items:', items.length);
+  const items = await loadJson('data/news.json'); console.info('news items:', items.length); console.info('news items:', items.length);
   el.innerHTML='';
   items.slice(0,10).forEach(n=>{
     const host = esc(n.host || n.source || '');
@@ -102,11 +102,11 @@ async function renderNews(){
 }
 
 // ---------- render: Note (to #noteBoxBox) ----------
-async function renderNote(){
+async function renderNote(){ console.info('renderNote start');
   const el = document.querySelector('#noteBoxBox');     // NEW
   const dateEl = document.querySelector('#noteBoxDate');
   if(!el) return;
-  const arr = await loadJson('data/ai_note.json'); console.info('note items:', arr.length);
+  const arr = await loadJson('data/ai_note.json'); console.info('note items:', arr.length); console.info('note items:', arr.length);
   el.innerHTML = '';
   if(!arr.length){ el.innerHTML = '<div class="mut">데이터 없음</div>'; return; }
   // 첫 항목에 날짜가 있다면 표시
