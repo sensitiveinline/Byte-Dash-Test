@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-18T02:59:02.484371+00:00",
+  "generated_at": "2025-08-18T03:01:01.775587+00:00",
   "items": [
     {
       "repo": "joshmoody24/make-github-great-again",
@@ -27,7 +27,7 @@
       "repo": "coleam00/Archon",
       "url": "https://github.com/coleam00/Archon",
       "description": "",
-      "stars": 7759,
+      "stars": 7761,
       "new_stars30": 0,
       "commits30": 19,
       "contributors": 11,
@@ -38,7 +38,7 @@
       "repo": "emcie-co/parlant",
       "url": "https://github.com/emcie-co/parlant",
       "description": "",
-      "stars": 4965,
+      "stars": 4966,
       "new_stars30": 0,
       "commits30": 200,
       "contributors": 15,
@@ -49,12 +49,12 @@
       "repo": "Shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "description": "",
-      "stars": 58905,
+      "stars": 58907,
       "new_stars30": 0,
       "commits30": 33,
-      "contributors": 46,
+      "contributors": 47,
       "release_recency": 90.0,
-      "score": 26.5
+      "score": 26.6
     },
     {
       "repo": "tsoding/nob.h",
