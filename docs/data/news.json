@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-18T02:44:29.876982+00:00",
+  "generated_at": "2025-08-18T02:47:16.650619+00:00",
   "items": [
     {
       "title": "Teaching the model: Designing LLM feedback loops that get smarter over time",
@@ -74,11 +74,11 @@
       "rank_score": 0.777
     },
     {
-      "title": "Anthropic gives Claude AI power to end conversations as part of 'model welfare' push - msn.com",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5\" target=\"_blank\">Anthropic gives Claude AI power to end conversations as part of 'model welfare' push</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">msn.com</font>",
-      "host": "news.google.com",
-      "ts": 1755474181,
+      "title": "Clojure Async Flow Guide",
+      "url": "https://clojure.github.io/core.async/flow-guide.html",
+      "summary": "<p>Article URL: <a href=\"https://clojure.github.io/core.async/flow-guide.html\">https://clojure.github.io/core.async/flow-guide.html</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=44936309\">https://news.ycombinator.com/item?id=44936309</a></p>\n<p>Points: 25</p>\n<p># Comments: 13</p>",
+      "host": "clojure.github.io",
+      "ts": 1755478323,
       "rank_score": 0.777
     }
   ]

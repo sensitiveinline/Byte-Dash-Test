@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-18T02:44:50.070151+00:00",
+  "generated_at": "2025-08-18T02:47:36.259155+00:00",
   "items": [
     {
       "repo": "joshmoody24/make-github-great-again",
@@ -27,7 +27,7 @@
       "repo": "coleam00/Archon",
       "url": "https://github.com/coleam00/Archon",
       "description": "",
-      "stars": 7738,
+      "stars": 7746,
       "new_stars30": 0,
       "commits30": 19,
       "contributors": 11,
@@ -38,7 +38,7 @@
       "repo": "emcie-co/parlant",
       "url": "https://github.com/emcie-co/parlant",
       "description": "",
-      "stars": 4955,
+      "stars": 4956,
       "new_stars30": 0,
       "commits30": 200,
       "contributors": 15,
@@ -49,12 +49,12 @@
       "repo": "Shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "description": "",
-      "stars": 58892,
+      "stars": 58894,
       "new_stars30": 0,
       "commits30": 33,
-      "contributors": 46,
+      "contributors": 47,
       "release_recency": 90.0,
-      "score": 26.5
+      "score": 26.6
     },
     {
       "repo": "tsoding/nob.h",
@@ -71,7 +71,7 @@
       "repo": "aliasrobotics/cai",
       "url": "https://github.com/aliasrobotics/cai",
       "description": "",
-      "stars": 2695,
+      "stars": 2696,
       "new_stars30": 0,
       "commits30": 21,
       "contributors": 73,
@@ -82,7 +82,7 @@
       "repo": "PixiEditor/PixiEditor",
       "url": "https://github.com/PixiEditor/PixiEditor",
       "description": "",
-      "stars": 4078,
+      "stars": 4079,
       "new_stars30": 0,
       "commits30": 114,
       "contributors": 27,
