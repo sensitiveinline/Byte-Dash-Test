@@ -10,7 +10,11 @@ async function loadJson(path){
     return Array.isArray(j) ? j : (j.items || []);
   }catch(e){ console.error('load fail:', path, e); return []; }
 }
-function pick(...sels){ for(const s of sels){const n=document.querySelector(s); if(n) return n;} return null; }
+function pick(...sels){ for(const s of sels){const n=document.querySelector(s); if(n) return n;}
+
+// subset 표시(초기 5, 더보기로 10)
+function showSubset(container, selector, max){ let i=0; container.querySelectorAll(selector).forEach(el=>{ el.style.display = (i<max)? '' : 'none'; i++; }); }
+ return null; }
 
 // ---------- render: Platforms ----------
 async function renderPlatforms(){

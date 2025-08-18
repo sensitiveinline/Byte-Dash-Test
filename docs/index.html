@@ -10,9 +10,9 @@
     body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); }
     .wrap { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
     h1 { margin: 0 0 6px; } small { color:var(--mut); }
-    .grid { display:grid; gap:16px; grid-template-columns:1fr; }
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);height:calc(100vh - 140px);}
     @media (min-width: 960px){ .grid{ grid-template-columns:1fr 1fr; } }
-    .card { background:#fff; border:1px solid var(--bd); border-radius:14px; padding:16px; }
+    .card{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px;display:flex;flex-direction:column;min-height:0;}
     .row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
     .pill { border:1px solid var(--bd); border-radius:999px; padding:4px 8px; font-size:12px; color:#1f2937; }
     .mut { color:var(--mut); font-size:12px; }
@@ -49,9 +49,9 @@
       <section class="card">
         <div class="row" style="margin-bottom:6px;">
           <div class="row" style="gap:8px;"><div class="pill">①</div><strong>&nbsp;AI 플랫폼 순위</strong></div>
-          <span class="mut">자동 스코어링</span>
+          <span class="mut">자동 스코어링</span> <button id="morePlat" class="btn">더보기</button>
         </div>
-        <ol id="platformList" class="rank"></ol>
+        <ol id="platformList" class="rank card-body"></ol>
       </section>
 
       <section class="card">
@@ -63,15 +63,15 @@
             <option value="releases">Releases(90d)</option>
           </select>
         </div>
-        <div id="repoList"></div>
+        <div id="repoList" class="card-body"></div>
       </section>
 
       <section class="card">
         <div class="row" style="margin-bottom:6px;">
           <div class="row" style="gap:8px;"><div class="pill">③</div><strong>&nbsp;AI NEWS</strong></div>
-          <span class="mut">요약</span>
+          <span class="mut">요약</span> <button id="moreNews" class="btn">더보기</button>
         </div>
-        <div id="newsList"></div>
+        <div id="newsList" class="card-body"></div>
       </section>
 
       <section class="card">
@@ -79,12 +79,12 @@
           <div class="row" style="gap:8px;"><div class="pill">④</div><strong>&nbsp;AI Note (오늘의 노트)</strong></div>
           <span id="noteBox" class="mut"></span>
         </div>
-        <div id="noteBox"></div>
+        <div id="noteBox" class="card-body"></div>
       </section>
     </main>
     <footer class="mut" style="margin-top:14px;">Data: data/*.json</footer>
   </div>
 
   <!-- 중요: defer 로드 -->
-  <script src="app.js?v=mvp6" defer></script></body>
+  <script src="app.js?v=mvp10" defer></script></body>
 </html>
