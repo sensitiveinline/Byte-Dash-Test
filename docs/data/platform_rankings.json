@@ -1,29 +1,6 @@
 {
-  "generated_at": "2025-08-17T13:55:48.385722+00:00",
+  "generated_at": "2025-08-18T02:59:13.302034+00:00",
   "items": [
-    {
-      "id": "chatgpt",
-      "name": "ChatGPT",
-      "score": 50.0,
-      "metrics": {
-        "users": 0.0,
-        "traffic": 0.0,
-        "growth": 0.0
-      },
-      "sources": [
-        {
-          "type": "news",
-          "url": "https://www.technologyreview.com/2025/08/15/1121920/the-download-taiwans-silicon-shield-and-chatgpts-personality-misstep/"
-        },
-        {
-          "type": "official",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5"
-        }
-      ],
-      "rank": 1,
-      "delta7": 0.0,
-      "delta30": 0.0
-    },
     {
       "id": "gemini",
       "name": "Gemini",
@@ -36,7 +13,38 @@
       "sources": [
         {
           "type": "official",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZXY2T3U4VEpCQkJZZGFobWExS1dSTGd4R0NDWTEtVnJyVGl6WFljbVcydGJkd1Y1TG40VUVUMTBsRWdHaGtXLVJhb3NoSnFERlhhM1Z5bkc0UmVubGh1VFRvTkNPZFdsZFdPemFNTUFpUmVxLUNVdWJ3dzlJcEJmRVpvMUVkeDdxRkF6bHJEZ0Jkdnp1cXRJazRZLUg3Q3JGMkRn?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWRYRElCMTQ0TF90bC1WS1lNMktwUkdoVDdPVW5VQmRqd2V3b1h1SWluNUJ3R0VWelVnMV9EV0ZMQzVwR0kxNWFXZ3JnczdSeE5hMm5GRlR6dUo4UTFtZy1EUDJwRXpCdUR3VWoxNXhYQXpkM2ZweE94aHpHendVNU1OSERzdDlvUS1JS1B1QUFsaWU2T19B?oc=5"
+        },
+        {
+          "type": "official",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5"
+        },
+        {
+          "type": "official",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMkh2VlRNTFl4NDJ0eUdkUUtyd3VvMXlHU01qRDQ2SXBjR3JjZkdNWjR5NjBGVnlVUHN3SXRERmJDV3lEdGdpUUhla1E2SUg2M3RmZXZnU29Xc3pSQktETTlUck03bDJwdjVwU25JMDVSNXdPVGFpNXMxUTE0M1Q4X1VB?oc=5"
+        },
+        {
+          "type": "official",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5"
+        }
+      ],
+      "rank": 1,
+      "delta7": 0.0,
+      "delta30": 0.0
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "score": 50.0,
+      "metrics": {
+        "users": 0.0,
+        "traffic": 0.0,
+        "growth": 0.0
+      },
+      "sources": [
+        {
+          "type": "official",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5"
         }
       ],
       "rank": 2,

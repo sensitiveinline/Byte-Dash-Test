@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-18T02:50:56.764233+00:00",
+  "generated_at": "2025-08-18T02:58:34.625139+00:00",
   "items": [
     {
       "title": "Teaching the model: Designing LLM feedback loops that get smarter over time",
@@ -7,7 +7,7 @@
       "summary": "How to close the loop between user behavior and LLM performance, and why human-in-the-loop systems are still essential in the age of gen AI.",
       "host": "venturebeat.com",
       "ts": 1755375300,
-      "rank_score": 0.799
+      "rank_score": 0.798
     },
     {
       "title": "Show HN: OverType – A Markdown WYSIWYG editor that's just a textarea",
@@ -26,6 +26,14 @@
       "rank_score": 0.796
     },
     {
+      "title": "1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030 - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWRYRElCMTQ0TF90bC1WS1lNMktwUkdoVDdPVW5VQmRqd2V3b1h1SWluNUJ3R0VWelVnMV9EV0ZMQzVwR0kxNWFXZ3JnczdSeE5hMm5GRlR6dUo4UTFtZy1EUDJwRXpCdUR3VWoxNXhYQXpkM2ZweE94aHpHendVNU1OSERzdDlvUS1JS1B1QUFsaWU2T19B?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWRYRElCMTQ0TF90bC1WS1lNMktwUkdoVDdPVW5VQmRqd2V3b1h1SWluNUJ3R0VWelVnMV9EV0ZMQzVwR0kxNWFXZ3JnczdSeE5hMm5GRlR6dUo4UTFtZy1EUDJwRXpCdUR3VWoxNXhYQXpkM2ZweE94aHpHendVNU1OSERzdDlvUS1JS1B1QUFsaWU2T19B?oc=5\" target=\"_blank\">1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Motley Fool</font>",
+      "host": "news.google.com",
+      "ts": 1755480600,
+      "rank_score": 0.777
+    },
+    {
       "title": "AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas - The Guardian",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5\" target=\"_blank\">AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
@@ -39,14 +47,6 @@
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQMkh2VlRNTFl4NDJ0eUdkUUtyd3VvMXlHU01qRDQ2SXBjR3JjZkdNWjR5NjBGVnlVUHN3SXRERmJDV3lEdGdpUUhla1E2SUg2M3RmZXZnU29Xc3pSQktETTlUck03bDJwdjVwU25JMDVSNXdPVGFpNXMxUTE0M1Q4X1VB?oc=5\" target=\"_blank\">How US ban fed China's AI boom</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
       "host": "news.google.com",
       "ts": 1755479949,
-      "rank_score": 0.777
-    },
-    {
-      "title": "1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030 - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUjMxeXg0U0VDTHFkWWF5VnIxeXNaVWJRSnVjdnlTdzhTbVV0Nkw4eDFpUGVRZ0ZNOGFfaldmX0k3c3FGUE5KQjJtd0JmN183S3hsRzVwOE5TUXgxREtqYzlBcmlUalNFYldGSFBiMmgyYWxSSG5MYjZmY1pWaFdxR3RNa0xzSHp3bG5DQg?oc=5",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPUjMxeXg0U0VDTHFkWWF5VnIxeXNaVWJRSnVjdnlTdzhTbVV0Nkw4eDFpUGVRZ0ZNOGFfaldmX0k3c3FGUE5KQjJtd0JmN183S3hsRzVwOE5TUXgxREtqYzlBcmlUalNFYldGSFBiMmgyYWxSSG5MYjZmY1pWaFdxR3RNa0xzSHp3bG5DQg?oc=5\" target=\"_blank\">1 Brilliant Artificial Intelligence (AI) Stock That Will Be Worth More Than Apple by 2030</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
-      "host": "news.google.com",
-      "ts": 1755482194,
       "rank_score": 0.777
     },
     {
