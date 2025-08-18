@@ -1,43 +1,85 @@
 {
+  "generated_at": "2025-08-18T01:27:54.672807+00:00",
   "items": [
     {
-      "title": "Gemini, Docs/Gmail 통합 확대",
-      "source": "Google AI Blog",
-      "url": "https://ai.googleblog.com/example",
-      "published_at": "2025-08-17T10:58:28.855060Z",
-      "summary": "워크스페이스 내 요약·자동화 기능 확대.",
-      "takeaway": "생산성 스택 침투 가속.",
-      "category": "모델·제품",
-      "ts": "2025-08-17T10:58:28.855060Z",
-      "ai": {
-        "insight": null,
-        "tags": [],
-        "confidence": 0.84,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "ai/summary"
+      "title": "Teaching the model: Designing LLM feedback loops that get smarter over time",
+      "url": "https://venturebeat.com/ai/teaching-the-model-designing-llm-feedback-loops-that-get-smarter-over-time/",
+      "summary": "How to close the loop between user behavior and LLM performance, and why human-in-the-loop systems are still essential in the age of gen AI.",
+      "host": "venturebeat.com",
+      "ts": 1755375300,
+      "rank_score": 0.801
     },
     {
-      "title": "LLaMA 기반 기업 배포 사례 증가",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/example",
-      "published_at": "2025-08-17T10:58:28.855060Z",
-      "summary": "엔터프라이즈 도입 속도 증가.",
-      "takeaway": "TCO 경쟁 본격화.",
-      "category": "정책·투자",
-      "ts": "2025-08-17T10:58:28.855060Z",
-      "ai": {
-        "insight": null,
-        "tags": [],
-        "confidence": 0.75,
-        "evidence": [],
-        "guardrail_flags": []
-      },
-      "method": "ai/summary"
+      "title": "Space station crew gains AI assistant - China Daily - Global Edition",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcTFZTUw0MURWb3JRQUtyd0h2cngxTnJvQ3RrS1Itakd0bFJuVVM4clFiVGFwaEF4U2FTYWlQY3dZQ3k4MS00OVoxbVRPczNoNkNKVFh4bzVOV2NtN1Jwam9XTVpockRNT1VvWV8taW94TnpRZGlFeS1wT3JIUVRxb0dB?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOcTFZTUw0MURWb3JRQUtyd0h2cngxTnJvQ3RrS1Itakd0bFJuVVM4clFiVGFwaEF4U2FTYWlQY3dZQ3k4MS00OVoxbVRPczNoNkNKVFh4bzVOV2NtN1Jwam9XTVpockRNT1VvWV8taW94TnpRZGlFeS1wT3JIUVRxb0dB?oc=5\" target=\"_blank\">Space station crew gains AI assistant</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
+      "host": "news.google.com",
+      "ts": 1755479360,
+      "rank_score": 0.778
+    },
+    {
+      "title": "A Macao-Shanghai AI medical research centre has been launched - Macao News",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPczZqbW1OMjRLUEdTNTBSLWtLdnlmQUs5SXo2SVB3NzNiZHg4QkppMW9UY2hUUm43SWtmMW4yYjZ5a3dHeURKMWhSY3ZXVDE4b0ZNaE9EWlZjazNncE1KQVRrNnNuclZFMVpiY1NwUG4wU0tDMkFXRWdENW1SXzh0MmJ5Z2NTWjlMUzJGeDVhVW90OEJhM1JITmlOd043SEI4a010MEFGUWpFdXVkbi11SW9OSGJzcThPeklnY0UyMA?oc=5\" target=\"_blank\">A Macao-Shanghai AI medical research centre has been launched</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Macao News</font>",
+      "host": "news.google.com",
+      "ts": 1755479492,
+      "rank_score": 0.778
+    },
+    {
+      "title": "AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ1Frb3lBeEJBTElBTmlKbmt1UG0zNEdCTUkwNEZSQTJmakc0b3FNQmRaNUU2TnAyWWUyWWRsYTRNOGhEZlpxdjZ4dlM4MWZlUV8tMHg2ZmN3Sm1JWFFvN1E5ekRoN28wbktHV0M3YnBHeFBzM3E1eWRqQm5jRUM2aEkyZkJrc2xITVFVTTFBeE5IRk0zSEZ1d2hkeXNFSnRVVVJLZGhOWTZsam1DdkhLM2VhSWx0ME5KZHN4NG14OFp4YlhSbVlFQnBxYTdqcFVhU1RxeEFSbG56NlU?oc=5\" target=\"_blank\">AI has created a new breed of cat video: addictive, disturbing and nauseatingly quick soap operas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "host": "news.google.com",
+      "ts": 1755475539,
+      "rank_score": 0.777
+    },
+    {
+      "title": "Should you delete your ChatGPT history? Why you might not have a choice. - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFRJSk5tenRuYWJqTFFKSE1KMGNwWlpaYnZyeGpQeGstdjBzUVd0SXp2dEdtMnRhOUJTRjNlZTFQR2dBQVVmUXZtNFJhbGZQYTRmMEo0ank0eUcycXRMamxMQXFLZDdld0NJNVhHZm1hNk9TVmlWdDhJOV9aNXJrT00yb0l4Y01kdzFCeUdLZlBGQ2Ro?oc=5\" target=\"_blank\">Should you delete your ChatGPT history? Why you might not have a choice.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">USA Today</font>",
+      "host": "news.google.com",
+      "ts": 1755475347,
+      "rank_score": 0.777
+    },
+    {
+      "title": "Oracle Expands AI Partnership with Google Cloud with Gemini Models to Oracle Cloud Infra - The Fast Mode",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVXNWMjA1OGFUX2RGWnlweFl5VWpUQ2VnSW90ZWZqeEFhcUw0aUllQW1IcXN1ekwwYV84NVBkMHFMcGhhRjl4QUtnaUNmX2gwZG5SSC1HdERleEE1NFFfVjEzY09RV2tKbm5uVl9JdnBReWFWWTN0SjJ2bG5qbllUTFJQeWk3NUd3Vy1vcXRUX0lvZVk5cnFwa3I2S2VXVXlUY00wNUpDLTZuSTJDRWxDR3ZvNnMtM0pFUTJWMV80ZGNEaVZhZ3VxX0JNTzVWa3JjMHNIbXNKYmtZN1U?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVXNWMjA1OGFUX2RGWnlweFl5VWpUQ2VnSW90ZWZqeEFhcUw0aUllQW1IcXN1ekwwYV84NVBkMHFMcGhhRjl4QUtnaUNmX2gwZG5SSC1HdERleEE1NFFfVjEzY09RV2tKbm5uVl9JdnBReWFWWTN0SjJ2bG5qbllUTFJQeWk3NUd3Vy1vcXRUX0lvZVk5cnFwa3I2S2VXVXlUY00wNUpDLTZuSTJDRWxDR3ZvNnMtM0pFUTJWMV80ZGNEaVZhZ3VxX0JNTzVWa3JjMHNIbXNKYmtZN1U?oc=5\" target=\"_blank\">Oracle Expands AI Partnership with Google Cloud with Gemini Models to Oracle Cloud Infra</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Fast Mode</font>",
+      "host": "news.google.com",
+      "ts": 1755476515,
+      "rank_score": 0.777
+    },
+    {
+      "title": "Anthropic gives Claude AI power to end conversations as part of 'model welfare' push - MSN",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbnZ1Y1Qyby1ka2lPams3bVdrZmFRaEJZQ2FIVWZnQ3h1Q3RmOHdjMVl3XzdmSVR4NXpHRk80VFhoVTVqMmh0ZGE5ZlhHcWsyRW9PWjg5TnpBSWswLVFmMlFmZHg0QjROM2NfWld3UGluN0F0YUdRTU1IV2RMNWZFZWhvT1ZjMWYwSVRZOURtb2dDa0hPS2JUMVJaQnI5NjBwR0p4clV6OHM2VEhzMUkxaktiVjktQ0xSbEltT0hwT3VzSDN6cjlibnBWb3FYQm5iY3Fxb0w1NFp4Nk1JTEhEeTUwQmh2c1hGZHFFalVR?oc=5\" target=\"_blank\">Anthropic gives Claude AI power to end conversations as part of 'model welfare' push</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "host": "news.google.com",
+      "ts": 1755474181,
+      "rank_score": 0.777
+    },
+    {
+      "title": "I Asked ChatGPT How To Turn $10 Into $1 Million: Here’s What It Said - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1QOUVNMFpnOFJGVUdyaTJyMWc2cXVRcElPeGhQYWV2cDREZFJEaFBXZXhjUjZfdF93NENoa1Brb1lQUDVvQVBBSldBTzN1ZXBBUWhMOXFUWTB0ZzZGb3pfcFZHaGxwVXBpZjVVdjFfaDQtRGZ2MmRuQg?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE1QOUVNMFpnOFJGVUdyaTJyMWc2cXVRcElPeGhQYWV2cDREZFJEaFBXZXhjUjZfdF93NENoa1Brb1lQUDVvQVBBSldBTzN1ZXBBUWhMOXFUWTB0ZzZGb3pfcFZHaGxwVXBpZjVVdjFfaDQtRGZ2MmRuQg?oc=5\" target=\"_blank\">I Asked ChatGPT How To Turn $10 Into $1 Million: Here’s What It Said</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "host": "news.google.com",
+      "ts": 1755468077,
+      "rank_score": 0.776
+    },
+    {
+      "title": "Is Artificial Intelligence Impossible? Aristotle & Aquinas on AI - TheCollector",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbEdmbldBS0lXeVdFTThYa05uMlE3T3ZQTmRFSlMwcmR3WEozMzg4ME9YYmxldDBZYTZlWGJGdlBKZ1AxMDY0a25ucVJ4LXBMX19UQnlxYllOenRNTzZUTlFtUVAxSDlMckE3cFVPdEU4NnhMNXpQcW1DNTZmWjFuWU5xYjN1UXpVSHc?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQbEdmbldBS0lXeVdFTThYa05uMlE3T3ZQTmRFSlMwcmR3WEozMzg4ME9YYmxldDBZYTZlWGJGdlBKZ1AxMDY0a25ucVJ4LXBMX19UQnlxYllOenRNTzZUTlFtUVAxSDlMckE3cFVPdEU4NnhMNXpQcW1DNTZmWjFuWU5xYjN1UXpVSHc?oc=5\" target=\"_blank\">Is Artificial Intelligence Impossible? Aristotle & Aquinas on AI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TheCollector</font>",
+      "host": "news.google.com",
+      "ts": 1755461725,
+      "rank_score": 0.775
+    },
+    {
+      "title": "If AI takes most of our jobs, money as we know it will be over. What then? - The Conversation",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWG42MUxBNlUyLWw1Q0FPVHlad3MyRGtvUUgtbWlmUjNMWElsN2hRUmJtVlZVNmN3WnIxUTU0N1JSMzRkZDJYM0d1TUYwQVdIQ1M3cVhmRlE0aUVKckZGZXczWWdBYUJRbXFheUNkb002alNOM05pTG9GU3hkS192Nk5XX3l4WlBHeHdYNkxHR3k5T2xFSXBoV1RScEpkS1J6U2kwOGxLX2kwQQ?oc=5",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWG42MUxBNlUyLWw1Q0FPVHlad3MyRGtvUUgtbWlmUjNMWElsN2hRUmJtVlZVNmN3WnIxUTU0N1JSMzRkZDJYM0d1TUYwQVdIQ1M3cVhmRlE0aUVKckZGZXczWWdBYUJRbXFheUNkb002alNOM05pTG9GU3hkS192Nk5XX3l4WlBHeHdYNkxHR3k5T2xFSXBoV1RScEpkS1J6U2kwOGxLX2kwQQ?oc=5\" target=\"_blank\">If AI takes most of our jobs, money as we know it will be over. What then?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conversation</font>",
+      "host": "news.google.com",
+      "ts": 1755457426,
+      "rank_score": 0.775
     }
-  ],
-  "meta": {
-    "generatedAt": "2025-08-17T10:58:28.856245Z"
-  }
+  ]
 }
